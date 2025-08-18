@@ -42,23 +42,79 @@ pip install chatterbox-tts
 ```
 
 
-# Usage
+# Quickstart
+
+```bash
+pip install chatterbox-tts
+```
+
+### Windows (PowerShell) one-time setup for local dev
+```powershell
+cd H:\python\TTS\chatterbox
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -U pip
+pip install -e .
+```
+
+### Text-to-Speech (TTS)
 ```python
 import torchaudio as ta
 from chatterbox.tts import ChatterboxTTS
 
-model = ChatterboxTTS.from_pretrained(device="cuda")
+model = ChatterboxTTS.from_pretrained(device="cuda")  # or "cpu" / "mps"
 
-text = "Ezreal and Jinx teamed up with Ahri, Yasuo, and Teemo to take down the enemy's Nexus in an epic late-game pentakill."
+text = "Hello world from Chatterbox."
 wav = model.generate(text)
-ta.save("test-1.wav", wav, model.sr)
+ta.save("outputs/test-1.wav", wav, model.sr)
 
-# If you want to synthesize with a different voice, specify the audio prompt
-AUDIO_PROMPT_PATH = "YOUR_FILE.wav"
+# Synthesize with your own voice prompt (a short, clean WAV)
+AUDIO_PROMPT_PATH = "prompt.wav"
 wav = model.generate(text, audio_prompt_path=AUDIO_PROMPT_PATH)
-ta.save("test-2.wav", wav, model.sr)
+ta.save("outputs/test-2.wav", wav, model.sr)
 ```
-See `example_tts.py` and `example_vc.py` for more examples.
+
+### Batch generate from a script file
+By default `example_tts.py` reads `script file.txt` (one line per utterance, or CSV/TSV with headers `text,filename,exaggeration,cfg_weight,temperature`) and writes WAVs to `outputs/`.
+
+```powershell
+cd H:\python\TTS\chatterbox
+.\.venv\Scripts\python.exe example_tts.py --prompt "prompt.wav" --script "script file.txt" --output-dir "outputs" --overwrite
+```
+
+Optional controls:
+- `--exaggeration` (emotion/energy, 0..1)
+- `--cfg-weight` (pacing/stability, 0..1)
+- `--temperature` (sampling randomness)
+
+Examples:
+```powershell
+.\.venv\Scripts\python.exe example_tts.py --prompt "prompt.wav" --script "script file.txt" --output-dir "outputs" --exaggeration 0.7 --cfg-weight 0.3 --overwrite
+```
+
+### Voice Conversion (VC)
+```python
+import torchaudio as ta
+from chatterbox.vc import ChatterboxVC
+
+model = ChatterboxVC.from_pretrained("cuda")
+wav = model.generate(
+    audio="input.wav",          # source speech to convert
+    target_voice_path="voice.wav"  # target voice reference
+)
+ta.save("outputs/testvc.wav", wav, model.sr)
+```
+
+### YouTube video workflow (example)
+1. Write lines in `script file.txt` (one per line). Keep them short and natural.
+2. Record or choose your prompt voice as `prompt.wav` (5–15s, clean, dry).
+3. Generate audio:
+   ```powershell
+   .\.venv\Scripts\python.exe example_tts.py --prompt "prompt.wav" --script "script file.txt" --output-dir "outputs" --exaggeration 0.6 --cfg-weight 0.4 --overwrite
+   ```
+4. Import resulting WAVs from `outputs/` into your editor (Premiere, CapCut, Resolve).
+5. Add background music/SFX; render your video for upload.
+
 
 # Acknowledgements
 - [Cosyvoice](https://github.com/FunAudioLLM/CosyVoice)

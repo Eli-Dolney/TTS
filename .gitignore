@@ -1,3 +1,33 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+
+# Packaging
+*.egg-info/
+dist/
+build/
+
+# Virtual envs
+.venv/
+venv/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Outputs and generated media
+outputs/
+*.wav
+*.mp3
+*.flac
+
+# Large model checkpoints
+*.pt
+*.safetensors
+*.ckpt
+
 .vscode
 
 # Pylance
@@ -46,3 +76,4 @@ checkpoints/
 
 # Ignore generated sample .wav files
 **/*.wav
+!eliv3.wav

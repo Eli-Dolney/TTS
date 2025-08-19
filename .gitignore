@@ -1,3 +1,37 @@
+# Environments
+.venv/
+venv/
+.python-version
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# OS/editor
+.DS_Store
+.idea/
+.vscode/
+
+# Generated audio/artifacts
+outputs/
+*.wav
+voices/**/*.wav
+*.mp3
+*.flac
+*.m4a
+*.aac
+*.ogg
+
+# Logs
+*.log
+*.jsonl
+
+# Env/config secrets
+.env
+*.env
+env.*
+
 # Byte-compiled / cache
 __pycache__/
 *.py[cod]

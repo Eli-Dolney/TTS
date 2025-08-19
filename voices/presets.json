@@ -1,0 +1,22 @@
+{
+  "eli-neutral": {
+    "prompt": "voices/eliv3.wav",
+    "exaggeration": 0.45,
+    "cfg_weight": 0.6,
+    "temperature": 0.8
+  },
+  "eli-funny": {
+    "prompt": "voices/eliv3.wav",
+    "exaggeration": 0.45,
+    "cfg_weight": 0.6,
+    "temperature": 0.8
+  },
+  "eli-question": {
+    "prompt": "voices/eliv3.wav",
+    "exaggeration": 0.45,
+    "cfg_weight": 0.6,
+    "temperature": 0.8
+  }
+}
+
+

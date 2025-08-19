@@ -7,6 +7,8 @@ import csv
 import json
 from dataclasses import dataclass
 from datetime import datetime
+from typing import Optional
+import librosa
 from chatterbox.tts import ChatterboxTTS
 
 # Automatically detect the best available device
@@ -44,7 +46,9 @@ class LineSpec:
     exaggeration: float
     cfg_weight: float
     temperature: float
-    filename_stem: str | None = None
+    filename_stem: Optional[str] = None
+    voice_name: Optional[str] = None
+    prompt_path: Optional[Path] = None
 
 
 def slugify(text: str, max_words: int = 8) -> str:
@@ -87,16 +91,44 @@ def read_lines(script_path: Path, defaults: LineSpec) -> list[LineSpec]:
                 exaggeration = float(row.get("exaggeration") or defaults.exaggeration)
                 cfg_weight = float(row.get("cfg_weight") or row.get("cfg") or defaults.cfg_weight)
                 temperature = float(row.get("temperature") or defaults.temperature)
-                specs.append(LineSpec(text, exaggeration, cfg_weight, temperature, stem))
+                voice_name = (row.get("voice") or "").strip() or None
+                prompt_col = (row.get("prompt") or row.get("audio_prompt") or "").strip() or None
+                prompt_path = Path(prompt_col) if prompt_col else None
+                specs.append(LineSpec(text, exaggeration, cfg_weight, temperature, stem, voice_name, prompt_path))
         return specs
 
     # Plain text: one line per utterance
     with script_path.open("r", encoding="utf-8") as f:
         lines = [ln.strip() for ln in f.readlines()]
-    return [
-        LineSpec(text=ln, exaggeration=defaults.exaggeration, cfg_weight=defaults.cfg_weight, temperature=defaults.temperature)
-        for ln in lines if ln
-    ]
+    specs: list[LineSpec] = []
+    for ln in lines:
+        if not ln:
+            continue
+        # Support optional "voice_name: actual text" prefix in plain text files
+        m = re.match(r"^\s*([A-Za-z0-9_-]+)\s*:\s*(.+)$", ln)
+        if m:
+            voice_name = m.group(1)
+            text = m.group(2)
+            specs.append(
+                LineSpec(
+                    text=text,
+                    exaggeration=defaults.exaggeration,
+                    cfg_weight=defaults.cfg_weight,
+                    temperature=defaults.temperature,
+                    voice_name=voice_name,
+                )
+            )
+        else:
+            specs.append(
+                LineSpec(
+                    text=ln,
+                    exaggeration=defaults.exaggeration,
+                    cfg_weight=defaults.cfg_weight,
+                    temperature=defaults.temperature,
+                    voice_name=defaults.voice_name,
+                )
+            )
+    return specs
 
 
 def build_arg_parser() -> argparse.ArgumentParser:
@@ -108,6 +140,10 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--cfg-weight", type=float, default=CFG_WEIGHT, help="Classifier-free guidance weight [0..1]")
     parser.add_argument("--temperature", type=float, default=TEMPERATURE, help="Sampling temperature")
     parser.add_argument("--device", type=str, choices=["auto", "cpu", "cuda", "mps"], default="auto", help="Runtime device override")
+    parser.add_argument("--presets-file", type=Path, default=Path("voices/presets.json"), help="JSON file of voice presets")
+    parser.add_argument("--voice", type=str, default=None, help="Default voice preset name (overridable per line via CSV 'voice' column)")
+    parser.add_argument("--to-48k", action="store_true", help="Resample output to 48 kHz for video")
+    parser.add_argument("--lufs-target", type=float, default=None, help="Normalize loudness to target LUFS (e.g., -16). Requires pyloudnorm if available.")
     parser.add_argument("--start-index", type=int, default=None, help="Optional starting index for filenames (e.g. 101)")
     parser.add_argument("--overwrite", action="store_true", help="Overwrite existing wav files instead of skipping")
     parser.add_argument("--seed", type=int, default=None, help="Set random seed for reproducibility")
@@ -130,22 +166,33 @@ def main():
 
     model = ChatterboxTTS.from_pretrained(device=selected_device)
 
-    # Prepare conditionals once if we have a prompt
-    use_prompt = args.prompt.exists()
-    if use_prompt:
-        model.prepare_conditionals(str(args.prompt), exaggeration=args.exaggeration)
+    # Load presets if present
+    presets: dict[str, dict] = {}
+    if args.presets_file and args.presets_file.exists():
+        try:
+            with args.presets_file.open("r", encoding="utf-8") as pf:
+                presets = json.load(pf)
+        except Exception:
+            presets = {}
+
+    default_voice = args.voice
+    if default_voice and default_voice not in presets:
+        print(f"Warning: voice preset '{default_voice}' not found in {args.presets_file}")
 
     defaults = LineSpec(
         text="Hello from Chatterbox.",
         exaggeration=args.exaggeration,
         cfg_weight=args.cfg_weight,
         temperature=args.temperature,
+        voice_name=default_voice,
+        prompt_path=args.prompt if args.prompt and args.prompt.exists() else None,
     )
     specs = read_lines(args.script, defaults)
 
     start_idx = args.start_index if args.start_index is not None else next_index(args.output_dir)
 
     with log_path.open("a", encoding="utf-8") as log_file:
+        last_voice_key = None
         for offset, spec in enumerate(specs, start=0):
             idx = start_idx + offset
             idx_str = f"{idx:03d}"
@@ -157,6 +204,40 @@ def main():
                 print(f"Skip (exists): {out_path}")
                 continue
 
+            # Resolve voice and prompt
+            resolved_voice = spec.voice_name or default_voice
+            resolved_prompt: Optional[Path] = spec.prompt_path
+            if resolved_voice and resolved_voice in presets:
+                preset = presets[resolved_voice]
+                ppath = preset.get("prompt") or preset.get("audio_prompt")
+                if ppath:
+                    resolved_prompt = Path(ppath)
+                # Merge defaults if user did not override
+                if spec.exaggeration == args.exaggeration:
+                    try:
+                        spec.exaggeration = float(preset.get("exaggeration", spec.exaggeration))
+                    except Exception:
+                        pass
+                if spec.cfg_weight == args.cfg_weight:
+                    try:
+                        spec.cfg_weight = float(preset.get("cfg_weight", spec.cfg_weight))
+                    except Exception:
+                        pass
+                if spec.temperature == args.temperature:
+                    try:
+                        spec.temperature = float(preset.get("temperature", spec.temperature))
+                    except Exception:
+                        pass
+
+            # Prepare conditionals when voice/prompt changes
+            voice_key = (resolved_voice or "__none__", str(resolved_prompt) if resolved_prompt else "__builtin__")
+            if resolved_prompt is not None and voice_key != last_voice_key:
+                if resolved_prompt.exists():
+                    model.prepare_conditionals(str(resolved_prompt), exaggeration=spec.exaggeration)
+                    last_voice_key = voice_key
+                else:
+                    print(f"Warning: prompt not found for voice '{resolved_voice}': {resolved_prompt}")
+
             wav = model.generate(
                 spec.text,
                 exaggeration=spec.exaggeration,
@@ -164,7 +245,26 @@ def main():
                 temperature=spec.temperature,
             )
 
-            ta.save(str(out_path), wav, model.sr)
+            # Post-processing: resample to 48k and/or LUFS normalize
+            target_sr = model.sr
+            wav_np = wav.squeeze(0).detach().cpu().numpy()
+
+            if args.to_48k and target_sr != 48000:
+                wav_np = librosa.resample(wav_np, orig_sr=target_sr, target_sr=48000)
+                target_sr = 48000
+
+            if args.lufs_target is not None:
+                try:
+                    import pyloudnorm as pyln  # type: ignore
+                    meter = pyln.Meter(target_sr)
+                    loud = meter.integrated_loudness(wav_np)
+                    gain_db = args.lufs_target - loud
+                    factor = 10 ** (gain_db / 20.0)
+                    wav_np = wav_np * factor
+                except Exception:
+                    print("Note: pyloudnorm not available; skipping LUFS normalization.")
+
+            ta.save(str(out_path), torch.from_numpy(wav_np).unsqueeze(0), target_sr)
             print(f"Saved: {out_path}")
 
             meta = {
@@ -174,11 +274,12 @@ def main():
                 "exaggeration": spec.exaggeration,
                 "cfg_weight": spec.cfg_weight,
                 "temperature": spec.temperature,
-                "prompt_path": str(args.prompt) if use_prompt else None,
+                "prompt_path": str(resolved_prompt) if resolved_prompt else None,
+                "voice": resolved_voice,
                 "device": selected_device,
                 "seed": args.seed,
                 "created_at": datetime.utcnow().isoformat() + "Z",
-                "sample_rate": model.sr,
+                "sample_rate": target_sr,
             }
             log_file.write(json.dumps(meta, ensure_ascii=False) + "\n")
 

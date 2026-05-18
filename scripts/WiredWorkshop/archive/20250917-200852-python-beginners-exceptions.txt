@@ -1,0 +1,34 @@
+eli-neutral: WiredWorkshop Python Beginners Course — Lesson Eight: Exceptions.
+eli-neutral: Welcome back to WiredWorkshop.
+eli-neutral: So far your programs worked as long as nothing went wrong.
+eli-neutral: Real world programs face errors all the time; that is where error handling comes in.
+
+eli-neutral: Exceptions.
+eli-neutral: An exception is an error that interrupts the program.
+eli-neutral: By default, exceptions crash with a red error message.
+eli-neutral: Try and except let you intercept errors and respond gracefully.
+
+eli-neutral: Catching specific exceptions.
+eli-neutral: If a user types letters where a number is expected, catch the ValueError and show a friendly message.
+eli-neutral: Catch File Not Found or Zero Division errors and handle each case appropriately.
+
+eli-neutral: Else and finally.
+eli-neutral: Else runs if no exception occurs.
+eli-neutral: Finally always runs, whether there was an error or not, useful for cleanup.
+
+eli-neutral: Raising exceptions.
+eli-neutral: Raise your own exceptions when input is invalid, for example raise ValueError with a clear message.
+
+eli-neutral: Project: safe calculator.
+eli-neutral: Ask for two numbers and divide them.
+eli-neutral: Handle invalid input and division by zero with friendly messages.
+eli-neutral: Use else to display the result when it works and finally to print a completion message every time.
+
+eli-neutral: Recap.
+eli-neutral: You learned what exceptions are, how to use try and except, how to use else and finally, how to raise your own exceptions, and how to apply these in a mini project.
+eli-neutral: Next lesson we move into modules and packages to organize code across files.
+eli-neutral: Thanks for watching WiredWorkshop.
+eli-neutral: Keep learning the wires.
+
+
+

@@ -1,0 +1,83 @@
+text,filename,voice,exaggeration,cfg_weight,temperature
+"Welcome back to Wired Workshop.",001-intro,wired-eliv3,0.58,0.42,0.78
+"In this session... we're going to explore mobile device accessories.",002-session-intro,wired-eliv3,0.55,0.42,0.78
+"Most of us think about our phone or tablet as a single device. But in reality... mobile devices rarely work alone.",003-rarely-alone,wired-eliv3,0.55,0.40,0.78
+"We connect them to headphones. Speakers. Styluses. Webcams. Docking stations. External input devices.",004-connect-list,wired-eliv3,0.58,0.45,0.78
+"All of these accessories extend what the device can do.",005-extend,wired-eliv3,0.55,0.42,0.78
+"They improve productivity. Increase comfort. Add new features. And sometimes completely change how the device is used.",006-benefits,wired-eliv3,0.55,0.42,0.78
+"Understanding these accessories is important for both troubleshooting... and your CompTIA A+ certification exam.",007-why-important,wired-eliv3,0.58,0.42,0.78
+"Let's start with input devices.",008-input-start,wired-eliv3,0.58,0.45,0.78
+"The most common way to interact with a phone or tablet is with your finger. Touchscreens work great for everyday tasks.",009-touchscreen,wired-eliv3,0.55,0.42,0.78
+"But sometimes you need more precision. That's where a stylus comes in.",010-stylus-intro,wired-eliv3,0.58,0.42,0.78
+"A stylus works like a digital pen or pencil. It allows much finer control compared to using your finger.",011-stylus-explained,wired-eliv3,0.55,0.40,0.78
+"This is especially useful for... drawing, taking notes, editing photos, signing documents, or navigating small interface elements.",012-stylus-uses,wired-eliv3,0.55,0.42,0.78
+"Modern styluses often connect wirelessly using Bluetooth. This allows additional features like... pressure sensitivity, palm rejection, shortcut buttons, and tilt detection.",013-stylus-features,wired-eliv3,0.55,0.40,0.78
+"Pressure sensitivity is important for artists... because pressing harder can create thicker or darker lines.",014-pressure,wired-eliv3,0.55,0.42,0.78
+"Some styluses also include programmable buttons for quick tools or shortcuts.",015-buttons,wired-eliv3,0.55,0.42,0.78
+"When supporting a stylus... compatibility is key. Not every stylus works with every device.",016-compatibility,wired-eliv3,0.58,0.42,0.78
+"For example, certain tablets only support specific first-party or certified styluses.",017-first-party,wired-eliv3,0.55,0.42,0.78
+"So if a stylus isn't working... first verify that it's compatible and properly paired. Sometimes it's not a defect at all. It's just the wrong model.",018-wrong-model,wired-eliv3,0.58,0.40,0.78
+"Next... let's talk about headsets.",019-headsets-intro,wired-eliv3,0.58,0.45,0.78
+"Instead of holding your phone to your ear... many people prefer hands-free communication. Headsets allow you to talk and listen comfortably while keeping your hands free.",020-hands-free,wired-eliv3,0.55,0.40,0.78
+"There are two main types. Wired and wireless.",021-two-types,wired-eliv3,0.58,0.45,0.78
+"Wired headsets may connect using USB-C, Lightning, or the older analog audio jack.",022-wired-headsets,wired-eliv3,0.55,0.42,0.78
+"That analog jack is called a TRRS connector. TRRS stands for tip, ring, ring, sleeve.",023-trrs,wired-eliv3,0.55,0.40,0.78
+"Each section carries part of the audio signal. Typically... one for left audio, one for right audio, one for microphone, and one for ground.",024-trrs-detail,wired-eliv3,0.55,0.40,0.78
+"It's the classic 3.5 millimeter headphone jack many people recognize.",025-35mm,wired-eliv3,0.55,0.42,0.78
+"Although some modern phones have removed this port... you'll still see it frequently on laptops and accessories.",026-removed-port,wired-eliv3,0.55,0.42,0.78
+"If someone complains their headset microphone isn't working... make sure they're using a TRRS headset and not an older TRS headphone cable that only supports audio output.",027-trrs-troubleshoot,wired-eliv3,0.58,0.40,0.78
+"That's a very common issue.",028-common-issue,wired-eliv3,0.58,0.45,0.78
+"Wireless headsets are increasingly popular. These usually connect over Bluetooth.",029-wireless-headsets,wired-eliv3,0.55,0.42,0.78
+"Bluetooth headsets are convenient because there are no wires to manage. They're great for commuting, exercising, or working on the move.",030-bt-convenient,wired-eliv3,0.55,0.42,0.78
+"The trade-off is battery life. If a wireless headset suddenly stops working... always check the battery first.",031-battery-tradeoff,wired-eliv3,0.58,0.42,0.78
+"It sounds simple... but it's often the cause. If the battery dies mid-day, switching to a wired backup is sometimes the easiest solution.",032-battery-fix,wired-eliv3,0.55,0.40,0.78
+"Similar to headsets... many people use external Bluetooth speakers.",033-speakers-intro,wired-eliv3,0.55,0.42,0.78
+"Phone speakers are small and limited. They're fine for calls... but not great for music or movies.",034-phone-speakers,wired-eliv3,0.55,0.42,0.78
+"Bluetooth speakers provide louder sound and better quality. They connect wirelessly and are often portable and battery powered.",035-bt-speakers,wired-eliv3,0.55,0.42,0.78
+"Troubleshooting is similar to other Bluetooth devices. Check pairing, battery levels, and connection distance.",036-bt-troubleshoot,wired-eliv3,0.55,0.42,0.78
+"Remember that Bluetooth range is limited. Usually around 30 feet. Walls or interference can reduce that range even further.",037-bt-range,wired-eliv3,0.55,0.40,0.78
+"Now let's move to cameras and webcams.",038-cameras-intro,wired-eliv3,0.58,0.45,0.78
+"Most mobile devices and laptops include built-in cameras. But sometimes you need better quality... or a camera on a system that doesn't have one.",039-built-in,wired-eliv3,0.55,0.42,0.78
+"External webcams solve this problem. These typically connect using USB.",040-external-webcam,wired-eliv3,0.55,0.42,0.78
+"Once plugged in... most operating systems automatically detect and configure them.",041-auto-detect,wired-eliv3,0.55,0.42,0.78
+"External webcams are often used for... video conferencing, streaming, recording, security, or remote work.",042-webcam-uses,wired-eliv3,0.55,0.42,0.78
+"If a webcam isn't recognized... try a different USB port or check device permissions.",043-webcam-fix,wired-eliv3,0.58,0.42,0.78
+"Modern operating systems often block camera access until permission is granted. So sometimes the issue isn't hardware at all. It's just a privacy setting.",044-privacy,wired-eliv3,0.55,0.40,0.78
+"Next... let's talk about docking stations.",045-dock-intro,wired-eliv3,0.58,0.45,0.78
+"Docking stations are extremely common in business environments.",046-dock-common,wired-eliv3,0.55,0.42,0.78
+"Imagine bringing your laptop to work every day and plugging in... power, monitor, keyboard, mouse, network cable, USB drives. That's a lot of cables.",047-lot-of-cables,wired-eliv3,0.55,0.40,0.78
+"A docking station simplifies everything. You connect one single connector to the laptop... and instantly, everything else connects automatically.",048-dock-simplifies,wired-eliv3,0.58,0.42,0.78
+"This saves time and reduces wear on ports.",049-saves-time,wired-eliv3,0.55,0.42,0.78
+"Docking stations also often add extra features like... multiple monitors, additional USB ports, Ethernet, audio connections, and sometimes even expansion slots.",050-dock-features,wired-eliv3,0.55,0.42,0.78
+"They're perfect for turning a laptop into a full desktop workstation.",051-desktop-mode,wired-eliv3,0.58,0.42,0.78
+"At the end of the day... you simply disconnect one cable and leave.",052-disconnect,wired-eliv3,0.55,0.42,0.78
+"If a user complains their external devices aren't working... check the dock first. Loose connections or power issues are very common.",053-dock-troubleshoot,wired-eliv3,0.58,0.40,0.78
+"If you want something smaller and more portable... you might use a port replicator.",054-port-rep-intro,wired-eliv3,0.55,0.42,0.78
+"A port replicator is similar to a docking station... but lighter and more universal.",055-port-rep-explain,wired-eliv3,0.55,0.42,0.78
+"Instead of a custom dock designed for one laptop model... port replicators usually connect through USB-C or USB. They simply replicate or duplicate ports.",056-port-rep-connect,wired-eliv3,0.55,0.40,0.78
+"For example... extra USB ports, HDMI or DisplayPort, SD card readers, audio jacks, and Ethernet.",057-port-rep-examples,wired-eliv3,0.55,0.42,0.78
+"These are great for travel or shared workspaces. Because they're generic... they work with almost any system.",058-port-rep-generic,wired-eliv3,0.55,0.42,0.78
+"But they may not offer as much power or performance as a full dock.",059-port-rep-limit,wired-eliv3,0.55,0.42,0.78
+"Now let's talk about input alternatives... starting with trackpads.",060-trackpad-intro,wired-eliv3,0.58,0.45,0.78
+"Most laptops include a built-in trackpad. A trackpad replaces the need for a mouse.",061-trackpad-explain,wired-eliv3,0.55,0.42,0.78
+"It's compact and perfect for small spaces like airplanes or coffee shops.",062-trackpad-compact,wired-eliv3,0.55,0.42,0.78
+"Trackpads also support gestures like... two-finger scrolling, pinch to zoom, three-finger switching, and multi-touch controls.",063-gestures,wired-eliv3,0.55,0.42,0.78
+"These gestures improve productivity. Some users even prefer them over traditional mice.",064-prefer-trackpad,wired-eliv3,0.55,0.42,0.78
+"You can also buy external trackpads for desktops. These connect via Bluetooth or USB.",065-external-trackpad,wired-eliv3,0.55,0.42,0.78
+"If the pointer jumps or behaves strangely... try cleaning the surface or adjusting sensitivity settings.",066-trackpad-fix,wired-eliv3,0.58,0.42,0.78
+"And many laptops allow you to disable the trackpad with a function key... to avoid accidental touches while typing.",067-disable-trackpad,wired-eliv3,0.55,0.42,0.78
+"Finally... let's talk about drawing pads or digitizers.",068-digitizer-intro,wired-eliv3,0.58,0.45,0.78
+"If you like using a stylus on a tablet but need that same precision on a desktop or laptop... a drawing pad is a great solution.",069-drawing-pad,wired-eliv3,0.55,0.40,0.78
+"A drawing pad is an external surface that acts like a digital canvas. You draw on the pad... and it controls the cursor on the screen.",070-how-it-works,wired-eliv3,0.55,0.40,0.78
+"These are extremely popular with artists, designers, and editors.",071-popular-with,wired-eliv3,0.55,0.42,0.78
+"They usually connect via USB or Bluetooth... and often support advanced features like pressure sensitivity and programmable buttons.",072-digitizer-connect,wired-eliv3,0.55,0.42,0.78
+"From a troubleshooting perspective... always make sure drivers or software are installed. Many digitizers need special drivers to function correctly.",073-drivers,wired-eliv3,0.58,0.40,0.78
+"So let's recap.",074-recap-intro,wired-eliv3,0.58,0.45,0.78
+"Mobile device accessories expand what your device can do.",075-recap-1,wired-eliv3,0.55,0.42,0.78
+"Styluses improve precision. Headsets and speakers improve audio. Webcams add video capability.",076-recap-2,wired-eliv3,0.55,0.42,0.78
+"Docking stations and port replicators expand connectivity. Trackpads and digitizers enhance input.",077-recap-3,wired-eliv3,0.55,0.42,0.78
+"Each accessory uses either wired connections like USB... or wireless connections like Bluetooth. And knowing how each one connects helps you quickly diagnose issues when something doesn't work.",078-recap-4,wired-eliv3,0.55,0.40,0.78
+"For your CompTIA exam... expect scenario questions. You might be asked which accessory fits a specific need... or which connection type makes the most sense.",079-exam-tip,wired-eliv3,0.55,0.40,0.78
+"Understanding these tools makes those questions straightforward.",080-straightforward,wired-eliv3,0.58,0.42,0.78
+"Thanks for watching Wired Workshop.",081-thanks,wired-eliv3,0.58,0.45,0.78
+"If this breakdown helped you understand mobile device accessories a little better... hit like, subscribe, and let's keep learning the wires.",082-outro,wired-eliv3,0.58,0.42,0.78

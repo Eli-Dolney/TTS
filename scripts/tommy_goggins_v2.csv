@@ -1,0 +1,17 @@
+text,filename,voice,exaggeration,cfg_weight,temperature
+"You think you're tired?... You think you've given everything you've got?",001-tired,tommy-paradise,0.65,0.38,0.88
+"You haven't even scratched the surface.",002-surface,tommy-paradise,0.60,0.38,0.85
+"Most people... operate at about forty percent of their capacity. And then they quit. They tap out. They tell themselves... they're done.",003-forty-percent,tommy-paradise,0.65,0.38,0.88
+"But you're not done.",004-not-done,tommy-paradise,0.70,0.40,0.85
+"Your mind is lying to you. It's trying to protect you... from the pain... from the suffering... from the growth.",005-mind-lying,tommy-paradise,0.65,0.35,0.88
+"Who's gonna carry the boats?",006-carry-boats,tommy-paradise,0.70,0.40,0.85
+"Who's gonna carry the logs?",007-carry-logs,tommy-paradise,0.70,0.40,0.85
+"That's the question you need to ask yourself... every single morning... when your alarm goes off and your body is screaming at you to stay in bed.",008-every-morning,tommy-paradise,0.65,0.35,0.88
+"Nobody is coming to save you.",009-nobody-save,tommy-paradise,0.70,0.38,0.85
+"Nobody is coming to do the work for you.",010-nobody-work,tommy-paradise,0.65,0.38,0.85
+"It's just you... against you.",011-you-vs-you,tommy-paradise,0.70,0.40,0.85
+"Get comfortable... being uncomfortable. That's where the magic happens. That's where you find out who you really are.",012-uncomfortable,tommy-paradise,0.65,0.35,0.88
+"They don't know me son.",013-dont-know-me,tommy-paradise,0.70,0.40,0.85
+"They don't know what I've been through. They don't know what it took... to get here.",014-been-through,tommy-paradise,0.65,0.38,0.88
+"So when life puts that weight on your back... when everything is falling apart... you look at yourself in that mirror... and you say...",015-weight,tommy-paradise,0.65,0.35,0.88
+"Stay hard.",016-stay-hard,tommy-paradise,0.70,0.40,0.85

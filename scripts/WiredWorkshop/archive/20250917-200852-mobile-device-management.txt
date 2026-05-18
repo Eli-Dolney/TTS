@@ -1,0 +1,72 @@
+eli-neutral: Mobile Device Management.
+eli-neutral: Welcome back to WiredWorkshop.
+eli-neutral: In this session we’re focusing on mobile device management, also called MDM.
+eli-neutral: If your organization uses mobile devices you need a way to manage them.
+eli-neutral: Without centralized management it’s hard to keep devices secure, consistent, and properly configured.
+
+eli-neutral: MDM is software that lets administrators control and configure smartphones, tablets, and sometimes laptops from a central console.
+eli-neutral: It can manage company-owned devices and personally owned devices used for work.
+eli-neutral: Personally owned for work is called BYOD: bring your own device.
+eli-neutral: BYOD is convenient but raises privacy and security concerns.
+eli-neutral: MDM solves this by partitioning the device into personal and managed work areas.
+
+eli-neutral: Administrators can enforce rules and policies.
+eli-neutral: Approve or block applications.
+eli-neutral: Enable, configure, or disable features like camera, GPS, and voice assistants.
+eli-neutral: Require passcodes or biometrics for device unlock.
+eli-neutral: These controls protect company data if a device is lost or stolen.
+
+eli-neutral: BYOD is not the only model.
+eli-neutral: COPE: corporate owned, personally enabled.
+eli-neutral: The company buys the phones, assigns them to employees, and manages them fully.
+eli-neutral: Employees can use them personally but the company controls policies and software.
+eli-neutral: CYOD: choose your own device from an approved list.
+
+eli-neutral: With MDM you manage policies from one screen.
+eli-neutral: Push rules and settings automatically instead of configuring by hand.
+eli-neutral: Corporate email can be auto-configured for every user.
+eli-neutral: Enforce multi-factor authentication, such as PIN plus fingerprint.
+eli-neutral: Block unsafe apps, install approved apps, and remove noncompliant apps.
+
+eli-neutral: An MDM console shows every device in the organization.
+eli-neutral: You’ll see device name, OS, assigned user, email, and identifiers such as the IMEI.
+eli-neutral: Drill into a device to view OS version, network info, security posture, and applied restrictions.
+eli-neutral: Toggle features like camera, FaceTime, voice dialing, and Siri.
+eli-neutral: Control printing, app installation, and other functions.
+
+eli-neutral: Synchronization is also managed.
+eli-neutral: Devices sync contacts, calendars, email, and reminders over the air.
+eli-neutral: Choose whether sync can use Wi‑Fi only or also cellular.
+eli-neutral: Limit large downloads to Wi‑Fi to control cost and data use.
+
+eli-neutral: MDM protects company data when phones are lost or stolen.
+eli-neutral: Remotely lock a device or wipe corporate data instantly.
+eli-neutral: When an employee leaves, revoke access without touching personal data.
+eli-neutral: When a device is replaced, remove company information safely.
+
+eli-neutral: MDM can preconfigure services.
+eli-neutral: Exchange or Gmail for email.
+eli-neutral: Cloud storage like OneDrive, Dropbox, or Google Drive.
+eli-neutral: Users sign in and everything works without manual server settings.
+
+eli-neutral: For certifications, remember deployment models and policies.
+eli-neutral: BYOD: employee owns the phone; work and personal are partitioned.
+eli-neutral: COPE: company owned, personally enabled.
+eli-neutral: CYOD: choose from approved devices.
+eli-neutral: MDM policies include screen locks, app restrictions, remote wipe, and encryption requirements.
+
+eli-neutral: In practice MDM saves time and increases security.
+eli-neutral: Change one setting in the console and apply it to hundreds of devices.
+eli-neutral: Maintain inventory and visibility of device health and compliance.
+eli-neutral: React quickly to threats, lost devices, or policy violations.
+
+eli-neutral: To wrap up, MDM gives organizations control over their mobile environment.
+eli-neutral: It enforces policies, secures data, and keeps work and personal information separate.
+eli-neutral: It centralizes configuration, security, synchronization, and inventory at scale.
+eli-neutral: Understanding MDM is critical for both real-world IT and certification exams.
+eli-neutral: Thanks for watching WiredWorkshop.
+eli-neutral: If this helped you study, hit like, subscribe, and let’s keep learning the wires.
+
+
+
+

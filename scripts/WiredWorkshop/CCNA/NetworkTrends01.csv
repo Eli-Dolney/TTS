@@ -1,0 +1,23 @@
+text,filename,voice,exaggeration,cfg_weight,temperature
+"Hello and welcome back to Wired Workshop! Today we’re talking about the future—and the trends reshaping networks in real time.",001-intro,wired-eliv3,0.58,0.45,0.75
+"From dial‑up modems to instant 4K streaming and billions of connected devices, networks have evolved at breakneck speed.",002-then-now,wired-eliv3,0.58,0.45,0.75
+"We’ll explore five major trends: BYOD, online collaboration, the reign of video, cloud computing, and the modern smart home network.",003-overview,wired-eliv3,0.58,0.45,0.75
+"BYOD — Bring Your Own Device changes the workplace by allowing personal phones, tablets, and laptops to access corporate resources.",004-byod-intro,wired-eliv3,0.58,0.45,0.75
+"Benefits: users are efficient with their own devices; flexible work from anywhere; potential hardware cost savings for companies.",005-byod-benefits,wired-eliv3,0.58,0.45,0.75
+"Challenges: security and control. How to protect confidential data on personal devices and prevent malware from entering the corporate network?",006-byod-challenges,wired-eliv3,0.58,0.45,0.75
+"Solutions: Mobile Device Management to create secure containers, and Network Access Control to verify device posture before granting access.",007-byod-solutions,wired-eliv3,0.58,0.45,0.75
+"Online Collaboration — Real‑time teamwork via chat, shared docs, and project boards replaces slow email threads and static files.",008-collab-intro,wired-eliv3,0.58,0.45,0.75
+"Impact on networks: requires low‑latency, reliable links and better upload speeds. Secure, high‑performance access to many cloud services is essential.",009-collab-network,wired-eliv3,0.58,0.45,0.75
+"The Reign of Video — Streaming and two‑way video calls dominate traffic and demand high bandwidth with low latency and jitter.",010-video-intro,wired-eliv3,0.58,0.45,0.75
+"Why QoS matters: prioritize interactive video and voice into express lanes so frames and audio stay smooth during congestion.",011-video-qos,wired-eliv3,0.58,0.45,0.75
+"Cloud Computing — Instead of owning servers, organizations rent compute, storage, and services from hyperscale data centers over the internet.",012-cloud-intro,wired-eliv3,0.58,0.45,0.75
+"Service models: SaaS for complete apps, PaaS for developer platforms, and IaaS for virtualized servers, storage, and networks.",013-cloud-models,wired-eliv3,0.58,0.45,0.75
+"Networking impact: the internet connection becomes the lifeline. Fast, reliable, secure WAN links to cloud regions are mission‑critical.",014-cloud-network,wired-eliv3,0.58,0.45,0.75
+"The Home Network Transformed — IoT adds smart speakers, cameras, thermostats, and appliances, straining Wi‑Fi and requiring better coverage.",015-home-iot,wired-eliv3,0.58,0.45,0.75
+"Powerline networking can extend connectivity using existing electrical wiring—handy for fixed devices without running long Ethernet.",016-home-powerline,wired-eliv3,0.58,0.45,0.75
+"Wireless Broadband for Homes — 5G can replace cable/DSL as primary internet, offering competitive speeds and simpler setup.",017-home-5g,wired-eliv3,0.58,0.45,0.75
+"Today’s home must support remote work, online classes, 4K streaming, and dozens of smart devices—demanding speed, reliability, and security.",018-home-demands,wired-eliv3,0.58,0.45,0.75
+"Recap — BYOD introduces flexibility and security challenges; collaboration and video drive low‑latency needs; cloud makes WAN links vital; homes are now smart, high‑demand networks.",019-recap,wired-eliv3,0.58,0.45,0.75
+"Thanks for joining Wired Workshop. Like and subscribe for more. Questions below—and until next time, keep learning!",020-outro,wired-eliv3,0.58,0.45,0.75
+
+

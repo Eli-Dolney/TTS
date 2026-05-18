@@ -1,0 +1,4 @@
+text,filename,voice,exaggeration,cfg_weight,temperature
+Welcome to Learning the Wires, your guide to understanding technology.,001-intro,wired-eliv3,0.58,0.45,0.75
+Let's break down complex concepts into simple, understandable pieces.,002-main,wired-eliv3,0.58,0.45,0.75
+Keep learning and stay curious!,003-outro,wired-eliv3,0.58,0.45,0.75

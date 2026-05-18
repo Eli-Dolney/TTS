@@ -116,6 +116,52 @@ ta.save("outputs/testvc.wav", wav, model.sr)
 5. Add background music/SFX; render your video for upload.
 
 
+# Channel workflow (multi-channel setups)
+
+Keep voice prompts organized by channel and use presets for reproducible settings.
+
+1) Channel mapping
+
+- Presets: `voices/presets.json` (maps preset names to prompt WAVs and defaults)
+- Channels: `voices/channels.json` (maps channel names to preset keys)
+- Symlinked folders for convenience: `voices/channels/<ChannelName>/...`
+
+Example presets (snippet):
+
+```json
+{
+  "wired-eliv3": { "prompt": "voices/eliv3.wav", "exaggeration": 0.5, "cfg_weight": 0.65, "temperature": 0.8 },
+  "tinytales-female": { "prompt": "voices/Female.wav", "exaggeration": 0.5, "cfg_weight": 0.65, "temperature": 0.8 }
+}
+```
+
+Example channels:
+
+```json
+{
+  "WiredWorkshop": ["wired-eliv3"],
+  "TinyTalesTV": ["tinytales-female", "tinytales-female2", "tinytales-oldman"],
+  "Other": ["other-man1", "other-man2", "other-news"]
+}
+```
+
+2) Generate channel CSVs
+
+Use the helper to build a CSV for a given channel:
+
+```bash
+python tools/sweep.py channel-csv WiredWorkshop scripts/wiredworkshop.csv --text "hello Welcome to our Empire"
+python tools/sweep.py channel-csv TinyTalesTV scripts/tinytales.csv --text "hello Welcome to our Empire"
+python tools/sweep.py channel-csv Other scripts/other.csv --text "hello Welcome to our Empire"
+```
+
+3) Render audio for a channel
+
+```bash
+python example_tts.py --script scripts/wiredworkshop.csv --output-dir outputs/WiredWorkshop --presets-file voices/presets.json --overwrite
+```
+
+Tip: set `--voice` to a specific preset to use its defaults when `voice` is not specified in the CSV.
 # Acknowledgements
 - [Cosyvoice](https://github.com/FunAudioLLM/CosyVoice)
 - [Real-Time-Voice-Cloning](https://github.com/CorentinJ/Real-Time-Voice-Cloning)

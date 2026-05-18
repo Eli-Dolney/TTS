@@ -1,0 +1,4 @@
+text,filename,voice,exaggeration,cfg_weight,temperature
+Welcome to Neural Wires, exploring the intersection of AI and neuroscience.,001-intro,wired-eliv3,0.58,0.45,0.75
+Today we're connecting the dots between artificial intelligence and the human brain.,002-main,wired-eliv3,0.58,0.45,0.75
+The future of intelligence is being written right now.,003-outro,wired-eliv3,0.58,0.45,0.75

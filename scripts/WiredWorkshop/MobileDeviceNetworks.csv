@@ -1,0 +1,70 @@
+text,filename,voice,exaggeration,cfg_weight,temperature
+"Welcome back to Wired Workshop.",001-intro,wired-eliv3,0.58,0.42,0.78
+"In this session... we're going to explore mobile device networks.",002-session-intro,wired-eliv3,0.55,0.42,0.78
+"Your smartphone is one of the most powerful computers you own. But unlike a desktop or even a laptop... it's designed to stay connected almost everywhere you go.",003-smartphone-power,wired-eliv3,0.55,0.40,0.78
+"Calls. Texts. Streaming video. GPS navigation. Hotspots. Bluetooth devices.",004-list-features,wired-eliv3,0.58,0.45,0.78
+"All of this works because of several different wireless technologies... working together inside one small device.",005-wireless-tech,wired-eliv3,0.55,0.40,0.78
+"Understanding how these networks function is essential for troubleshooting connectivity issues, configuring devices, and of course... passing your CompTIA A+ exam.",006-why-important,wired-eliv3,0.58,0.42,0.78
+"Let's start with the biggest one.",007-start-biggest,wired-eliv3,0.58,0.45,0.78
+"Cellular networks.",008-cellular,wired-eliv3,0.60,0.45,0.78
+"When you hear the term cell phone... the word cell actually refers to cellular coverage areas.",009-cell-meaning,wired-eliv3,0.55,0.40,0.78
+"Mobile providers divide large geographic regions into smaller sections called cells. Each cell has its own antenna or tower that provides service to devices nearby.",010-cells-explained,wired-eliv3,0.55,0.40,0.78
+"As you move... your phone automatically switches between towers. This process is called handoff... and it's what allows you to drive down the highway while staying on the same phone call.",011-handoff,wired-eliv3,0.55,0.40,0.78
+"Modern cellular networks provide both voice and data... and you control how your phone uses them.",012-voice-data,wired-eliv3,0.55,0.42,0.78
+"You can enable or disable cellular data. You can use Wi-Fi only. Or you can turn on airplane mode... which disables all wireless radios at once.",013-control-options,wired-eliv3,0.55,0.40,0.78
+"Airplane mode is often used for flights, saving battery life, or troubleshooting network issues.",014-airplane-mode,wired-eliv3,0.55,0.42,0.78
+"Cellular technology has evolved over time. You'll often hear terms like 3G, 4G, LTE, and 5G. These represent different generations of mobile network speed and capability.",015-evolution,wired-eliv3,0.55,0.40,0.78
+"Let's break them down.",016-break-down,wired-eliv3,0.58,0.45,0.78
+"3G was the first generation that really focused on data. It allowed mobile internet browsing, GPS apps, video calls, and streaming media. Before 3G... phones were mostly for voice and text.",017-3g,wired-eliv3,0.55,0.40,0.78
+"4G, often called LTE, or Long-Term Evolution... brought much faster speeds. We're talking up to around 100 to 150 megabits per second.",018-4g-lte,wired-eliv3,0.55,0.40,0.78
+"This made HD video streaming, mobile gaming, and app downloads much smoother.",019-4g-benefits,wired-eliv3,0.55,0.42,0.78
+"Then came LTE Advanced, sometimes called LTE-A... which pushed speeds even higher.",020-lte-advanced,wired-eliv3,0.55,0.42,0.78
+"And today we use 5G.",021-5g-intro,wired-eliv3,0.58,0.45,0.78
+"5G dramatically increases bandwidth and reduces latency. Some 5G connections can reach speeds approaching gigabit internet... similar to home fiber connections.",022-5g-speed,wired-eliv3,0.55,0.40,0.78
+"That kind of speed allows things like... cloud gaming, 4K streaming, real-time video calls, and large Internet of Things deployments.",023-5g-uses,wired-eliv3,0.55,0.42,0.78
+"So if a user complains that their phone feels slow... understanding whether they're on 3G, LTE, or 5G can immediately explain the issue.",024-troubleshoot-speed,wired-eliv3,0.58,0.42,0.78
+"Now let's talk about Wi-Fi.",025-wifi-intro,wired-eliv3,0.58,0.45,0.78
+"Even though cellular networks are powerful... most phones still rely heavily on 802.11 wireless networks, also known as Wi-Fi.",026-wifi-reliance,wired-eliv3,0.55,0.40,0.78
+"Wi-Fi gives you high speeds without using cellular data. It's commonly faster, cheaper, and more stable indoors.",027-wifi-benefits,wired-eliv3,0.55,0.42,0.78
+"Instead of connecting to towers miles away... Wi-Fi connects to a local access point, usually your home or office router.",028-wifi-local,wired-eliv3,0.55,0.40,0.78
+"Modern Wi-Fi standards can easily exceed hundreds of megabits per second.",029-wifi-speed,wired-eliv3,0.55,0.42,0.78
+"Many phones even support Wi-Fi calling... which routes phone calls through your internet connection instead of the cellular network.",030-wifi-calling,wired-eliv3,0.55,0.40,0.78
+"This is incredibly helpful in buildings where cell signals are weak. If you ever lose signal but still have Wi-Fi... calls and texts may still work.",031-wifi-calling-benefit,wired-eliv3,0.55,0.42,0.78
+"Mobile phones can also act as a hotspot. This turns your phone into a mini wireless router.",032-hotspot-intro,wired-eliv3,0.58,0.42,0.78
+"Here's how it works.",033-how-it-works,wired-eliv3,0.58,0.45,0.78
+"Your phone connects to the cellular network using 4G or 5G. Then other devices connect to your phone using Wi-Fi. Your phone shares that internet connection with them.",034-hotspot-explained,wired-eliv3,0.55,0.40,0.78
+"This is called tethering or mobile hotspot mode. It's perfect for laptops or tablets when traveling.",035-tethering,wired-eliv3,0.55,0.42,0.78
+"But keep in mind... some carriers charge extra or limit hotspot usage. So if a hotspot feature isn't working... it might be a carrier restriction, not a hardware issue.",036-hotspot-limits,wired-eliv3,0.55,0.40,0.78
+"Now let's talk about SIM cards.",037-sim-intro,wired-eliv3,0.58,0.45,0.78
+"Every cellular device needs a way to identify itself to the carrier. That's where the Subscriber Identity Module, or SIM, comes in.",038-sim-explained,wired-eliv3,0.55,0.40,0.78
+"A SIM card stores information like... your phone number, your carrier details, your subscriber ID, and authentication keys.",039-sim-stores,wired-eliv3,0.55,0.42,0.78
+"This tells the network who you are... and what services you're allowed to use.",040-sim-purpose,wired-eliv3,0.55,0.42,0.78
+"Traditionally, SIMs were small physical cards you insert into the phone. If you moved the SIM to another phone... your number moved with it. This made switching devices quick and easy.",041-physical-sim,wired-eliv3,0.55,0.40,0.78
+"Today, many phones use eSIM, or embedded SIM. Instead of a removable card... the SIM is built directly into the phone's hardware.",042-esim-intro,wired-eliv3,0.55,0.40,0.78
+"You activate it digitally using software or a QR code.",043-esim-activate,wired-eliv3,0.55,0.42,0.78
+"eSIMs are more convenient and harder to lose. They also allow multiple profiles... so one device can have multiple phone numbers or carriers.",044-esim-benefits,wired-eliv3,0.55,0.42,0.78
+"From a troubleshooting perspective... always verify SIM or eSIM activation when cellular service fails.",045-sim-troubleshoot,wired-eliv3,0.58,0.42,0.78
+"Next up is Bluetooth.",046-bluetooth-intro,wired-eliv3,0.58,0.45,0.78
+"Bluetooth is used for short-range communication between devices. Things like... headsets, speakers, keyboards, smartwatches, and car stereos.",047-bluetooth-uses,wired-eliv3,0.55,0.42,0.78
+"Bluetooth devices must go through a pairing process before they connect. Pairing creates a trusted relationship between the devices.",048-pairing,wired-eliv3,0.55,0.40,0.78
+"This usually involves confirming or entering a PIN or pairing code. Once paired... the devices reconnect automatically.",049-pairing-process,wired-eliv3,0.55,0.42,0.78
+"If a Bluetooth device won't connect... try turning Bluetooth off and back on, forgetting the device and repairing, or checking battery levels.",050-bluetooth-fix,wired-eliv3,0.55,0.40,0.78
+"Bluetooth problems are extremely common... so knowing these steps is important for support.",051-bluetooth-common,wired-eliv3,0.58,0.42,0.78
+"Now let's talk about location services and GPS.",052-gps-intro,wired-eliv3,0.58,0.45,0.78
+"GPS stands for Global Positioning System. It uses satellites orbiting Earth to determine your exact position.",053-gps-explained,wired-eliv3,0.55,0.40,0.78
+"Your phone listens for signals from multiple satellites. By comparing the timing differences... it calculates latitude, longitude, and altitude.",054-gps-how,wired-eliv3,0.55,0.40,0.78
+"If your phone can see at least four satellites... it can determine your location very accurately.",055-four-satellites,wired-eliv3,0.55,0.42,0.78
+"But GPS isn't the only method.",056-not-only,wired-eliv3,0.58,0.45,0.78
+"Phones also use Wi-Fi networks, cell tower triangulation, and assisted GPS. This helps determine your location faster... and even indoors.",057-other-methods,wired-eliv3,0.55,0.40,0.78
+"If GPS seems inaccurate... switching location services off and on or moving near a window can help.",058-gps-fix,wired-eliv3,0.55,0.42,0.78
+"Finally... let's quickly cover airplane mode and radio control.",059-airplane-intro,wired-eliv3,0.58,0.45,0.78
+"Modern phones contain multiple radios. Cellular, Wi-Fi, Bluetooth, GPS, and NFC.",060-multiple-radios,wired-eliv3,0.55,0.42,0.78
+"Airplane mode disables all of them at once. But you can manually re-enable Wi-Fi or Bluetooth afterward.",061-airplane-disable,wired-eliv3,0.55,0.40,0.78
+"This is helpful for saving battery or isolating connectivity issues. For example... if a phone drains battery quickly, turning off unused radios can extend life significantly.",062-battery-tip,wired-eliv3,0.55,0.40,0.78
+"So let's recap.",063-recap-intro,wired-eliv3,0.58,0.45,0.78
+"Mobile devices rely on several wireless technologies working together.",064-recap-1,wired-eliv3,0.55,0.42,0.78
+"Cellular networks like 3G, LTE, and 5G provide wide-area coverage. Wi-Fi provides faster local access. Hotspots share internet with other devices.",065-recap-2,wired-eliv3,0.55,0.42,0.78
+"SIM and eSIM identify you to the carrier. Bluetooth connects peripherals. GPS and location services determine your position. And airplane mode controls everything.",066-recap-3,wired-eliv3,0.55,0.42,0.78
+"Understanding these systems helps you troubleshoot problems faster... and prepares you for certification questions that mix these technologies together.",067-recap-final,wired-eliv3,0.58,0.40,0.78
+"Thanks for watching Wired Workshop.",068-thanks,wired-eliv3,0.58,0.45,0.78
+"If this breakdown helped you understand mobile device networks a little better... hit like, subscribe, and let's keep learning the wires.",069-outro,wired-eliv3,0.58,0.42,0.78

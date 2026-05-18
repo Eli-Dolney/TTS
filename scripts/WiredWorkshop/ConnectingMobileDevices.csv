@@ -1,0 +1,81 @@
+text,filename,voice,exaggeration,cfg_weight,temperature
+"Welcome back to Wired Workshop.",001-intro,wired-eliv3,0.58,0.42,0.78
+"In this session... we're going to explore connecting mobile devices.",002-session-intro,wired-eliv3,0.55,0.42,0.78
+"Look around any classroom, office, or coffee shop. Almost everyone is carrying at least one mobile device.",003-look-around,wired-eliv3,0.55,0.40,0.78
+"A phone. A tablet. Maybe even both.",004-devices,wired-eliv3,0.58,0.45,0.78
+"And all of these devices need ways to connect back to computers, networks, and accessories.",005-need-connect,wired-eliv3,0.55,0.42,0.78
+"We charge them. We sync data. We transfer files. We connect displays. We plug in headsets. We share internet.",006-what-we-do,wired-eliv3,0.58,0.45,0.78
+"So understanding how mobile devices connect... both wired and wireless... is critical for troubleshooting and for passing your CompTIA A+ exam.",007-why-critical,wired-eliv3,0.58,0.42,0.78
+"In this video, we'll look at... wired connections, USB types, Apple connectors, wireless options, Bluetooth, NFC, and hotspot and tethering.",008-overview,wired-eliv3,0.55,0.42,0.78
+"Let's start with wired connectivity.",009-wired-start,wired-eliv3,0.58,0.45,0.78
+"One of the most common ways to connect a mobile device is with USB... or the Universal Serial Bus.",010-usb-intro,wired-eliv3,0.55,0.40,0.78
+"USB has been around for decades. And although it started as a simple way to connect keyboards and mice... today it does a lot more.",011-usb-history,wired-eliv3,0.55,0.40,0.78
+"On mobile devices, USB is used for... charging, data transfer, device synchronization, backups, connecting to a PC, and sometimes even video output.",012-usb-uses,wired-eliv3,0.55,0.42,0.78
+"So when you plug your phone into your laptop... it's not just charging.",013-not-just-charging,wired-eliv3,0.58,0.42,0.78
+"You might also be copying photos, syncing music, or enabling debugging tools. USB does all of that over one cable.",014-usb-versatile,wired-eliv3,0.55,0.42,0.78
+"Over the years... USB connectors have changed shapes.",015-connectors-changed,wired-eliv3,0.55,0.42,0.78
+"Older mobile devices commonly used Mini USB or Micro USB.",016-mini-micro,wired-eliv3,0.55,0.42,0.78
+"Mini USB showed up on early cameras and GPS units. Micro USB became extremely popular on older Android phones.",017-mini-micro-detail,wired-eliv3,0.55,0.40,0.78
+"If you've ever struggled trying to flip the connector three times before it fits... that's Micro USB.",018-flip-joke,wired-eliv3,0.58,0.42,0.78
+"These connectors worked well... but they had limitations. They were slower. They were fragile. And they only plugged in one direction.",019-limitations,wired-eliv3,0.55,0.42,0.78
+"So manufacturers began moving to something better.",020-something-better,wired-eliv3,0.58,0.45,0.78
+"Today... most modern devices use USB-C.",021-usbc-intro,wired-eliv3,0.58,0.45,0.78
+"USB-C is quickly becoming the universal standard. It's small, reversible, and much more powerful.",022-usbc-standard,wired-eliv3,0.55,0.42,0.78
+"You can plug it in either direction... which sounds simple, but makes everyday use much easier.",023-reversible,wired-eliv3,0.55,0.40,0.78
+"Inside a USB-C connector are 24 pins. This allows it to carry... data, power, video, audio, and even networking.",024-24-pins,wired-eliv3,0.55,0.40,0.78
+"All through one single port.",025-one-port,wired-eliv3,0.58,0.45,0.78
+"That means the same cable can... charge your phone, transfer files, connect to a monitor, or dock into a laptop.",026-same-cable,wired-eliv3,0.55,0.42,0.78
+"USB-C also supports much faster speeds compared to older USB versions.",027-faster-speeds,wired-eliv3,0.55,0.42,0.78
+"So if a user complains that file transfers are slow... using an old cable could actually be the bottleneck.",028-old-cable,wired-eliv3,0.58,0.42,0.78
+"Not all USB cables are equal. That's an important troubleshooting tip.",029-not-equal,wired-eliv3,0.58,0.45,0.78
+"USB-C also supports something called Power Delivery... often shortened to PD.",030-power-delivery,wired-eliv3,0.55,0.42,0.78
+"Power Delivery allows higher wattage charging. Instead of slow five-watt charging like older USB... USB-C can deliver 20, 45, or even 100 watts.",031-pd-watts,wired-eliv3,0.55,0.40,0.78
+"That's enough to charge phones, tablets, and even laptops.",032-pd-devices,wired-eliv3,0.55,0.42,0.78
+"So if a device isn't charging quickly... make sure both the charger and the cable support USB-C Power Delivery. Using the wrong charger can dramatically slow things down.",033-pd-troubleshoot,wired-eliv3,0.58,0.40,0.78
+"If you're supporting older Apple devices... you might see something different.",034-apple-intro,wired-eliv3,0.55,0.42,0.78
+"Instead of USB, older iPhones and iPads use the Lightning connector.",035-lightning,wired-eliv3,0.55,0.42,0.78
+"Lightning was Apple's proprietary connector for many years. It's small, reversible, and has eight pins.",036-lightning-detail,wired-eliv3,0.55,0.40,0.78
+"It handled charging and data transfer just like USB.",037-lightning-function,wired-eliv3,0.55,0.42,0.78
+"The downside is compatibility. Lightning only works with Apple devices. So you often needed separate cables just for those devices.",038-lightning-downside,wired-eliv3,0.55,0.42,0.78
+"Newer Apple devices are now moving to USB-C as well... which simplifies things for everyone.",039-apple-usbc,wired-eliv3,0.55,0.42,0.78
+"But you may still encounter Lightning during troubleshooting or exams.",040-lightning-exam,wired-eliv3,0.58,0.42,0.78
+"So that covers wired connections.",041-wired-done,wired-eliv3,0.58,0.45,0.78
+"Now let's move into wireless connectivity.",042-wireless-intro,wired-eliv3,0.58,0.45,0.78
+"One of the simplest wireless technologies is Bluetooth.",043-bluetooth-intro,wired-eliv3,0.55,0.42,0.78
+"Bluetooth is used for short-range communication. Usually within about 30 feet.",044-bluetooth-range,wired-eliv3,0.55,0.42,0.78
+"Bluetooth creates something called a Personal Area Network... or PAN.",045-pan,wired-eliv3,0.55,0.40,0.78
+"It's perfect for connecting nearby accessories like... headphones, speakers, keyboards, mice, smartwatches, and car stereos.",046-bt-accessories,wired-eliv3,0.55,0.42,0.78
+"Before devices can talk... they must be paired. Pairing creates a trusted connection.",047-pairing,wired-eliv3,0.55,0.40,0.78
+"This often involves confirming a PIN or matching a number. Once paired... devices reconnect automatically.",048-pairing-process,wired-eliv3,0.55,0.42,0.78
+"If a Bluetooth device won't connect... try these steps. Turn Bluetooth off and on. Remove and repair the device. Restart both devices. Check battery levels.",049-bt-fix,wired-eliv3,0.55,0.40,0.78
+"These simple fixes solve most Bluetooth issues.",050-bt-fix-summary,wired-eliv3,0.58,0.42,0.78
+"Next is Near Field Communication... or NFC.",051-nfc-intro,wired-eliv3,0.58,0.45,0.78
+"NFC is very short-range. We're talking just a few centimeters. Almost touching.",052-nfc-range,wired-eliv3,0.55,0.42,0.78
+"Because of this limited range... NFC is very secure and intentional.",053-nfc-secure,wired-eliv3,0.55,0.42,0.78
+"It's commonly used for... mobile payments, access badges, quick pairing, and small data transfers.",054-nfc-uses,wired-eliv3,0.55,0.42,0.78
+"If you've ever tapped your phone to pay at a register... that's NFC. If you tap your phone to unlock a secure door... that's NFC.",055-nfc-examples,wired-eliv3,0.58,0.42,0.78
+"Some organizations even replace ID cards with phones or smartwatches.",056-nfc-orgs,wired-eliv3,0.55,0.42,0.78
+"NFC is low power and fast... but it only works at very close distances. So if something requires tapping or holding the phone near a reader... that's probably NFC.",057-nfc-summary,wired-eliv3,0.55,0.40,0.78
+"Another useful feature is tethering and hotspots.",058-tethering-intro,wired-eliv3,0.58,0.45,0.78
+"Your phone isn't just a client device. It can actually become a router.",059-phone-router,wired-eliv3,0.58,0.42,0.78
+"When you enable hotspot mode... your phone shares its cellular internet connection with other devices.",060-hotspot-mode,wired-eliv3,0.55,0.40,0.78
+"Here's what happens.",061-heres-what,wired-eliv3,0.58,0.45,0.78
+"Your phone connects to the 4G or 5G cellular network. Then it creates a Wi-Fi network. Other devices connect to your phone... just like they would connect to a home router.",062-hotspot-how,wired-eliv3,0.55,0.40,0.78
+"This is incredibly useful when traveling or when Wi-Fi isn't available.",063-hotspot-useful,wired-eliv3,0.55,0.42,0.78
+"If multiple devices connect, we call it a hotspot. If only one device connects... it's often called tethering.",064-hotspot-vs-tether,wired-eliv3,0.55,0.42,0.78
+"Tethering can be done using... Wi-Fi, Bluetooth, or USB. USB tethering is often the fastest and most stable option.",065-tether-methods,wired-eliv3,0.55,0.42,0.78
+"But not all carriers allow hotspot features. Some require special plans.",066-carrier-limits,wired-eliv3,0.55,0.42,0.78
+"So if hotspot isn't working... it may not be a technical problem at all. It might be a carrier restriction. Always check the plan first.",067-check-plan,wired-eliv3,0.58,0.40,0.78
+"Let's quickly talk about data synchronization.",068-sync-intro,wired-eliv3,0.58,0.45,0.78
+"When connecting devices with USB or wirelessly... users often want to back up photos, transfer files, sync contacts, install updates, or manage storage.",069-sync-uses,wired-eliv3,0.55,0.42,0.78
+"Sometimes the device asks what mode you want. Charging only. File transfer. Media transfer. Or tethering.",070-modes,wired-eliv3,0.55,0.42,0.78
+"If a computer doesn't recognize the phone... check the connection mode. It might simply be set to charge only. That's a very common issue.",071-charge-only,wired-eliv3,0.58,0.42,0.78
+"So let's recap.",072-recap-intro,wired-eliv3,0.58,0.45,0.78
+"Mobile devices connect in many different ways.",073-recap-1,wired-eliv3,0.55,0.42,0.78
+"USB and USB-C handle charging and data. Lightning may appear on older Apple devices.",074-recap-2,wired-eliv3,0.55,0.42,0.78
+"Bluetooth connects personal accessories. NFC handles quick secure interactions. And hotspots or tethering share internet with other devices.",075-recap-3,wired-eliv3,0.55,0.42,0.78
+"Knowing which technology is being used helps you troubleshoot faster... and support users more effectively.",076-recap-4,wired-eliv3,0.58,0.42,0.78
+"And for your CompTIA exam... expect questions that mix these together. You might see scenarios asking which connection is fastest, which is shortest range, or which is best for charging.",077-exam-tip,wired-eliv3,0.55,0.40,0.78
+"Understanding the differences makes those questions easy.",078-differences,wired-eliv3,0.58,0.42,0.78
+"Thanks for watching Wired Workshop.",079-thanks,wired-eliv3,0.58,0.45,0.78
+"If this breakdown helped you understand connecting mobile devices a little better... hit like, subscribe, and let's keep learning the wires.",080-outro,wired-eliv3,0.58,0.42,0.78

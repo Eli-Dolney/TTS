@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import argparse
+import csv
+import json
 from pathlib import Path
 from itertools import product
 
@@ -10,16 +12,56 @@ import torchaudio as ta
 from chatterbox.tts import ChatterboxTTS
 
 
+def write_channel_csv(channel: str, out_csv: Path, text: str = "hello Welcome to our Empire") -> int:
+    presets_path = Path("voices/presets.json")
+    channels_path = Path("voices/channels.json")
+    if not presets_path.exists() or not channels_path.exists():
+        raise FileNotFoundError("voices/presets.json or voices/channels.json not found")
+    presets = json.loads(presets_path.read_text(encoding="utf-8"))
+    channels = json.loads(channels_path.read_text(encoding="utf-8"))
+    if channel not in channels:
+        raise KeyError(f"Unknown channel '{channel}'. Available: {', '.join(channels.keys())}")
+    voice_keys = channels[channel]
+    rows = [("text","filename","voice","prompt","exaggeration","cfg_weight","temperature")]
+    for key in voice_keys:
+        p = presets.get(key)
+        if not p:
+            continue
+        rows.append((text, key, key, p.get("prompt"), p.get("exaggeration",0.5), p.get("cfg_weight",0.5), p.get("temperature",0.8)))
+    out_csv.parent.mkdir(parents=True, exist_ok=True)
+    with out_csv.open('w', newline='', encoding='utf-8') as f:
+        csv.writer(f).writerows(rows)
+    return len(rows) - 1
+
+
 def main():
-    p = argparse.ArgumentParser(description="Parameter sweep for Chatterbox (exaggeration x cfg_weight)")
-    p.add_argument("--text", type=str, required=True)
-    p.add_argument("--prompt", type=Path, default=None)
-    p.add_argument("--exag", type=str, default="0.4,0.5,0.7,0.9", help="Comma list of exaggeration values")
-    p.add_argument("--cfg", type=str, default="0.3,0.4,0.5,0.6", help="Comma list of cfg_weight values")
-    p.add_argument("--temperature", type=float, default=0.8)
-    p.add_argument("--device", type=str, choices=["auto", "cpu", "cuda", "mps"], default="auto")
-    p.add_argument("--outdir", type=Path, default=Path("outputs/sweeps"))
+    p = argparse.ArgumentParser(description="Parameter sweep or channel CSV helper for Chatterbox")
+    sub = p.add_subparsers(dest="cmd")
+
+    p_sweep = sub.add_parser("sweep", help="Generate a sweep of exaggeration x cfg")
+    p_sweep.add_argument("--text", type=str, required=True)
+    p_sweep.add_argument("--prompt", type=Path, default=None)
+    p_sweep.add_argument("--exag", type=str, default="0.4,0.5,0.7,0.9")
+    p_sweep.add_argument("--cfg", type=str, default="0.3,0.4,0.5,0.6")
+    p_sweep.add_argument("--temperature", type=float, default=0.8)
+    p_sweep.add_argument("--device", type=str, choices=["auto", "cpu", "cuda", "mps"], default="auto")
+    p_sweep.add_argument("--outdir", type=Path, default=Path("outputs/sweeps"))
+
+    p_csv = sub.add_parser("channel-csv", help="Write a CSV for a channel's presets")
+    p_csv.add_argument("channel", type=str)
+    p_csv.add_argument("out_csv", type=Path)
+    p_csv.add_argument("--text", type=str, default="hello Welcome to our Empire")
+
     args = p.parse_args()
+
+    if args.cmd == "channel-csv":
+        n = write_channel_csv(args.channel, args.out_csv, text=args.text)
+        print(f"WROTE {args.out_csv} rows={n}")
+        return
+
+    if args.cmd != "sweep":
+        p.print_help()
+        return
 
     # Device
     if args.device == "auto":

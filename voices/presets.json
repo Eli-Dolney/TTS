@@ -1,4 +1,10 @@
 {
+  "purpleeagle-keegan": {
+    "prompt": "voices/PurpleEagle_Keegan.wav",
+    "exaggeration": 0.55,
+    "cfg_weight": 0.50,
+    "temperature": 0.8
+  },
   "eli-neutral": {
     "prompt": "voices/eliv3.wav",
     "exaggeration": 0.50,
@@ -16,6 +22,78 @@
     "exaggeration": 0.50,
     "cfg_weight": 0.65,
     "temperature": 0.8
+  },
+  "wired-eliv3": {
+    "prompt": "voices/eliv3.wav",
+    "exaggeration": 0.50,
+    "cfg_weight": 0.65,
+    "temperature": 0.8
+  },
+  "wired-eliv3-pro": {
+    "prompt": "voices/eliv3.wav",
+    "exaggeration": 0.58,
+    "cfg_weight": 0.45,
+    "temperature": 0.75
+  },
+  "tinytales-female": {
+    "prompt": "voices/Female.wav",
+    "exaggeration": 0.50,
+    "cfg_weight": 0.65,
+    "temperature": 0.8
+  },
+  "tinytales-female2": {
+    "prompt": "voices/Female2.wav",
+    "exaggeration": 0.50,
+    "cfg_weight": 0.65,
+    "temperature": 0.8
+  },
+  "tinytales-oldman": {
+    "prompt": "voices/Story Old Man.wav",
+    "exaggeration": 0.55,
+    "cfg_weight": 0.60,
+    "temperature": 0.8
+  },
+  "other-man1": {
+    "prompt": "voices/Man1.wav",
+    "exaggeration": 0.50,
+    "cfg_weight": 0.65,
+    "temperature": 0.8
+  },
+  "other-man2": {
+    "prompt": "voices/man2.wav",
+    "exaggeration": 0.50,
+    "cfg_weight": 0.65,
+    "temperature": 0.8
+  },
+  "other-news": {
+    "prompt": "voices/News.wav",
+    "exaggeration": 0.50,
+    "cfg_weight": 0.65,
+    "temperature": 0.8
+  },
+  "wired-businessgirl": {
+    "prompt": "voices/Business Girl.wav",
+    "exaggeration": 0.50,
+    "cfg_weight": 0.65,
+    "temperature": 0.8
+  },
+  "tommy-paradise": {
+    "prompt": "voices/tommy_paradise.wav",
+    "exaggeration": 0.55,
+    "cfg_weight": 0.50,
+    "temperature": 0.8
+  },
+  "other-screen-narrator": {
+    "prompt": "voices/screen_narrator.wav",
+    "exaggeration": 0.60,
+    "cfg_weight": 0.42,
+    "temperature": 0.82
+  },
+  "other-aussie": {
+    "prompt": "voices/aussie_short.wav",
+    "exaggeration": 0.55,
+    "cfg_weight": 0.50,
+    "temperature": 0.80
   }
 }
 

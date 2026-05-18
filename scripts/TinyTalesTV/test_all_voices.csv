@@ -1,0 +1,8 @@
+text,filename,voice,exaggeration,cfg_weight,temperature
+"Welcome to Tiny Tales TV, where stories come to life!",001-female-intro,tinytales-female,0.50,0.65,0.8
+"Today we have a magical adventure waiting for you.",002-female-story,tinytales-female,0.50,0.65,0.8
+"Once upon a time, in a land far away, there lived a brave little explorer.",003-female2-intro,tinytales-female2,0.50,0.65,0.8
+"This explorer discovered a hidden treasure that would change everything.",004-female2-story,tinytales-female2,0.50,0.65,0.8
+"Now, let me tell you a story from my many years of experience.",005-oldman-intro,tinytales-oldman,0.55,0.60,0.8
+"This is a tale of wisdom, courage, and the magic of friendship.",006-oldman-story,tinytales-oldman,0.55,0.60,0.8
+"Thank you for joining us on this wonderful storytelling journey!",007-outro,tinytales-female,0.50,0.65,0.8

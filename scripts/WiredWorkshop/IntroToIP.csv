@@ -1,0 +1,159 @@
+text,filename,voice,exaggeration,cfg_weight,temperature
+"Welcome back to Wired Workshop.",001-intro,wired-eliv3,0.58,0.42,0.78
+"In this video... we're going to do an introduction to IP.",002-intro-ip,wired-eliv3,0.55,0.42,0.78
+"And although this does not map one-to-one to a specific CompTIA A+ objective... it supports almost everything in Domain 2, the networking domain.",003-domain2,wired-eliv3,0.55,0.40,0.78
+"A lot of networking topics build on this foundation.",004-foundation,wired-eliv3,0.55,0.42,0.78
+"So if you're new to networking... or you've heard terms like IP address, TCP, UDP, ports, packets, and encapsulation but they still feel fuzzy... this video will connect the dots.",005-connect-dots,wired-eliv3,0.55,0.40,0.78
+"We're going to keep it practical.",006-practical,wired-eliv3,0.58,0.42,0.78
+"We'll use simple analogies... but we'll also tie them back to real network behavior, so the next networking videos will make much more sense.",007-analogies,wired-eliv3,0.55,0.42,0.78
+"Let's begin with the big picture.",008-big-picture,wired-eliv3,0.58,0.45,0.78
+"A network exists to move information from one device to another.",009-network-purpose,wired-eliv3,0.55,0.42,0.78
+"You might have a laptop talking to a printer. A phone talking to a Wi-Fi router. A desktop talking to a server in the cloud.",010-examples,wired-eliv3,0.55,0.42,0.78
+"And these networks can be built in many different ways. Ethernet, which is wired. Wi-Fi, which is wireless. Cellular networks. Fiber. Cable. DSL. And there are many others.",011-network-types,wired-eliv3,0.55,0.42,0.78
+"From the perspective of IP... it doesn't really matter what the road is made of. IP is focused on what's inside the packets moving across those roads.",012-ip-perspective,wired-eliv3,0.55,0.40,0.78
+"So here's an analogy we'll use throughout this video.",013-analogy-intro,wired-eliv3,0.58,0.42,0.78
+"The network is the road system. IP is the delivery truck. And inside the truck are boxes.",014-road-truck,wired-eliv3,0.55,0.42,0.78
+"Those boxes are TCP or UDP. And inside those boxes is the actual application data... like web traffic, email, video calls, file transfers, and so on.",015-boxes,wired-eliv3,0.55,0.40,0.78
+"This concept of placing one protocol inside another is one of the most important ideas in networking.",016-important-concept,wired-eliv3,0.58,0.42,0.78
+"We call it encapsulation when we pack it up. And decapsulation when we unpack it on the other side.",017-encapsulation,wired-eliv3,0.55,0.42,0.78
+"Let's build the packet from the outside in.",018-build-packet,wired-eliv3,0.58,0.45,0.78
+"Imagine you're sending a request to a web server. Your laptop is the client. The web server is the destination.",019-client-server,wired-eliv3,0.55,0.42,0.78
+"If you're on a wired network... that information might be placed inside an Ethernet frame.",020-ethernet-frame,wired-eliv3,0.55,0.42,0.78
+"Ethernet frames have a structure. There's a header at the beginning... and there's a trailer at the end.",021-frame-structure,wired-eliv3,0.55,0.40,0.78
+"The header and trailer help the network devices understand where the data starts, where it ends, and whether the frame arrived intact.",022-header-trailer,wired-eliv3,0.55,0.42,0.78
+"Inside that Ethernet frame is the payload. And that payload often contains IP traffic.",023-payload,wired-eliv3,0.55,0.42,0.78
+"So now we zoom in. Inside the Ethernet payload is an IP packet.",024-zoom-ip,wired-eliv3,0.58,0.42,0.78
+"That IP packet also has an IP header. That header includes things like the source and destination IP addresses.",025-ip-header,wired-eliv3,0.55,0.42,0.78
+"And inside that IP packet is another payload. And that payload is often TCP or UDP.",026-ip-payload,wired-eliv3,0.55,0.42,0.78
+"So now we zoom in again. If it's TCP... inside the IP payload is a TCP segment.",027-zoom-tcp,wired-eliv3,0.58,0.42,0.78
+"The TCP segment also has a TCP header. And inside the TCP segment is the application data.",028-tcp-header,wired-eliv3,0.55,0.42,0.78
+"For web traffic, that might be HTTP or HTTPS. For email, it might be SMTP or IMAP. For file transfers, it might be SMB or SFTP.",029-app-protocols,wired-eliv3,0.55,0.42,0.78
+"So what we have is layered communication.",030-layered,wired-eliv3,0.58,0.42,0.78
+"Ethernet on the outside. IP inside Ethernet. TCP or UDP inside IP. Application data inside TCP or UDP.",031-layers-list,wired-eliv3,0.55,0.42,0.78
+"This is why networking feels like nesting dolls. Each layer wraps the next.",032-nesting-dolls,wired-eliv3,0.55,0.42,0.78
+"Now let's talk about why we do this. Because networks need to solve multiple problems at once.",033-why,wired-eliv3,0.58,0.45,0.78
+"We need to move data across a local network. That's something Ethernet and Wi-Fi are good at.",034-local-network,wired-eliv3,0.55,0.42,0.78
+"We also need a standardized way to route data across many networks... even across the world. That's what IP is designed for.",035-route-world,wired-eliv3,0.55,0.40,0.78
+"And we also need a standardized way to manage conversations between applications. That's where TCP and UDP come in.",036-conversations,wired-eliv3,0.55,0.42,0.78
+"So each layer has a job. And together... they form a complete communication system.",037-complete-system,wired-eliv3,0.58,0.42,0.78
+"Now let's focus on IP.",038-focus-ip,wired-eliv3,0.58,0.45,0.78
+"IP stands for Internet Protocol. It's the addressing and routing system that allows data to move between networks.",039-ip-definition,wired-eliv3,0.55,0.42,0.78
+"If Ethernet is what helps devices communicate on the same local network... IP is what helps those local networks communicate with other networks.",040-ip-role,wired-eliv3,0.55,0.40,0.78
+"In the real world... IP is why your laptop can talk to a server across the internet.",041-real-world-1,wired-eliv3,0.55,0.42,0.78
+"IP is also why your phone can stream video from a content provider hundreds or thousands of miles away.",042-real-world-2,wired-eliv3,0.55,0.42,0.78
+"So IP is our truck. But for the truck to drive somewhere... it needs addresses. That's where IP addresses come in.",043-ip-addresses,wired-eliv3,0.58,0.42,0.78
+"An IP address is like a street address. It tells us where something is. But it's not a name. It's a number.",044-street-address,wired-eliv3,0.55,0.42,0.78
+"If you're using IPv4... it looks like four numbers separated by dots, like 192.168.1.10.",045-ipv4,wired-eliv3,0.55,0.42,0.78
+"If you're using IPv6... it looks like groups of hexadecimal values separated by colons.",046-ipv6,wired-eliv3,0.55,0.42,0.78
+"For the A+ exam... you don't need to master every detail of IPv6, but you do need to understand that both exist and why IPv6 is important.",047-exam-ipv6,wired-eliv3,0.55,0.40,0.78
+"IPv4 has a limited number of addresses. IPv6 has an enormous address space. That's the main reason we had to expand.",048-expand,wired-eliv3,0.55,0.42,0.78
+"But regardless of version... IP addresses exist to identify devices and route packets.",049-identify-route,wired-eliv3,0.58,0.42,0.78
+"Here's a key idea. An IP address identifies a location on the network... not a specific device forever.",050-key-idea,wired-eliv3,0.58,0.40,0.78
+"If you move to a different network... your IP address usually changes. If you disconnect and reconnect... it might change again.",051-changes,wired-eliv3,0.55,0.42,0.78
+"That's why home networks often use DHCP... which automatically assigns IP addresses.",052-dhcp,wired-eliv3,0.55,0.42,0.78
+"So if someone says... my IP address changed... that might be normal.",053-normal-change,wired-eliv3,0.55,0.42,0.78
+"And if someone says... I can't connect... one of the first troubleshooting steps is to check if they have a valid IP address.",054-troubleshoot-ip,wired-eliv3,0.58,0.42,0.78
+"Now... even if you know the destination IP address, there's still a problem.",055-still-problem,wired-eliv3,0.58,0.45,0.78
+"Most servers do multiple things. A server might host a website. It might also host email. It might also provide remote access. It might also run a database.",056-multiple-services,wired-eliv3,0.55,0.42,0.78
+"So when a packet arrives at that server's IP address... how does the server know which application should receive it?",057-which-app,wired-eliv3,0.55,0.40,0.78
+"This is where ports come in.",058-ports-intro,wired-eliv3,0.58,0.45,0.78
+"A port number is like a room number in a building. The building address is the IP address. The room number is the port.",059-room-analogy,wired-eliv3,0.55,0.42,0.78
+"So the server is a building with many rooms. And different services listen on different ports.",060-many-rooms,wired-eliv3,0.55,0.42,0.78
+"Web traffic often goes to port 80 for HTTP or 443 for HTTPS. Secure Shell uses port 22. DNS uses 53. And email services have their own ports depending on the protocol.",061-common-ports,wired-eliv3,0.55,0.42,0.78
+"So when you send traffic to a server... you are usually sending it to an IP address and a port number. That combination tells the server exactly where to deliver the data.",062-ip-plus-port,wired-eliv3,0.55,0.40,0.78
+"Now we introduce TCP and UDP.",063-tcp-udp-intro,wired-eliv3,0.58,0.45,0.78
+"TCP and UDP are transport protocols. They handle the end-to-end communication between applications.",064-transport,wired-eliv3,0.55,0.42,0.78
+"They also allow multiple conversations to happen at the same time. This is called multiplexing.",065-multiplexing,wired-eliv3,0.55,0.42,0.78
+"It means your computer can be streaming music, downloading a file, loading a website, and syncing email... all at once.",066-all-at-once,wired-eliv3,0.55,0.42,0.78
+"Each conversation is separated by port numbers and protocol rules.",067-separated,wired-eliv3,0.55,0.42,0.78
+"Now let's break down TCP first.",068-tcp-start,wired-eliv3,0.58,0.45,0.78
+"TCP is the Transmission Control Protocol. TCP is connection-oriented.",069-tcp-definition,wired-eliv3,0.55,0.42,0.78
+"That means there is a formal process to start the communication... and a formal process to end it.",070-formal-process,wired-eliv3,0.55,0.40,0.78
+"This is often compared to making a phone call. You dial. It rings. Someone answers. You confirm you can hear each other. Then you talk. And when you're done... you hang up.",071-phone-analogy,wired-eliv3,0.55,0.42,0.78
+"That's TCP.",072-thats-tcp,wired-eliv3,0.58,0.42,0.78
+"In networking terms... TCP uses a handshake to establish the connection. And when you close the connection... there's a teardown process.",073-handshake,wired-eliv3,0.55,0.40,0.78
+"TCP is also considered reliable. Not because it's magical... but because it includes acknowledgments.",074-reliable,wired-eliv3,0.55,0.42,0.78
+"When TCP sends data... the receiver confirms it arrived. If the sender doesn't receive an acknowledgment... it assumes something was lost and it retransmits.",075-acks,wired-eliv3,0.55,0.40,0.78
+"TCP also manages flow control. If the receiver is overwhelmed... it can signal the sender to slow down. This prevents data from flooding a device that can't keep up.",076-flow-control,wired-eliv3,0.55,0.42,0.78
+"So TCP is great for accuracy.",077-tcp-accuracy,wired-eliv3,0.58,0.42,0.78
+"If you're loading a webpage, downloading a file, or sending an email... you want the data to arrive correctly.",078-arrive-correctly,wired-eliv3,0.55,0.42,0.78
+"You don't want half a file. You don't want missing parts of a website. You want all of it... in order... intact.",079-all-intact,wired-eliv3,0.55,0.40,0.78
+"That's why those applications often use TCP.",080-use-tcp,wired-eliv3,0.55,0.42,0.78
+"Now UDP.",081-udp-start,wired-eliv3,0.58,0.45,0.78
+"UDP is the User Datagram Protocol. UDP is connectionless.",082-udp-definition,wired-eliv3,0.55,0.42,0.78
+"There's no handshake. No formal setup. No formal teardown.",083-no-handshake,wired-eliv3,0.55,0.42,0.78
+"It's more like dropping a letter in the mail without requiring a signature. You send it. And you hope it arrives.",084-mail-analogy,wired-eliv3,0.55,0.42,0.78
+"UDP does not include acknowledgments. It does not retransmit automatically. It does not provide flow control in the same way.",085-no-acks,wired-eliv3,0.55,0.42,0.78
+"So in that sense... it's considered unreliable delivery.",086-unreliable,wired-eliv3,0.55,0.42,0.78
+"But that doesn't mean it's bad. It means it's lightweight. Low overhead. Fast.",087-lightweight,wired-eliv3,0.58,0.42,0.78
+"And that's exactly why many real-time applications use UDP.",088-realtime-udp,wired-eliv3,0.55,0.42,0.78
+"Let's talk about real-time traffic.",089-realtime-intro,wired-eliv3,0.58,0.45,0.78
+"Voice calls. Video calls. Live streaming. Online gaming. These involve continuous streams of information.",090-realtime-list,wired-eliv3,0.55,0.42,0.78
+"If you lose one tiny piece of audio... you don't stop the conversation and rewind time. You just keep going.",091-keep-going,wired-eliv3,0.55,0.40,0.78
+"If TCP had to retransmit every missing piece... your call would stutter and freeze constantly.",092-stutter,wired-eliv3,0.55,0.42,0.78
+"So instead... real-time apps often choose UDP. It's better to lose a tiny bit of data than to introduce a delay.",093-choose-udp,wired-eliv3,0.58,0.40,0.78
+"So UDP is commonly used where speed and timeliness matter more than perfect reliability.",094-speed-matters,wired-eliv3,0.55,0.42,0.78
+"And some protocols that use UDP can still add reliability at the application layer if they want.",095-app-reliability,wired-eliv3,0.55,0.42,0.78
+"The application can choose to resend important pieces. Or it can ignore losses. That decision depends on what the application is trying to do.",096-app-decision,wired-eliv3,0.55,0.42,0.78
+"Here's a key exam mindset.",097-exam-mindset,wired-eliv3,0.58,0.45,0.78
+"TCP is for accuracy and reliability. UDP is for speed and low overhead. Neither is universally better. It depends on the job.",098-tcp-vs-udp,wired-eliv3,0.55,0.40,0.78
+"Now let's bring ports back into the picture.",099-ports-again,wired-eliv3,0.58,0.45,0.78
+"Port numbers range from 0 to 65,535. For both TCP and UDP.",100-port-range,wired-eliv3,0.55,0.42,0.78
+"But TCP port 80 is not the same as UDP port 80. They are separate spaces.",101-separate-spaces,wired-eliv3,0.55,0.42,0.78
+"So the port number alone doesn't tell the whole story. You need three things... the destination IP address, the protocol TCP or UDP, and the destination port number.",102-three-things,wired-eliv3,0.55,0.40,0.78
+"That combination uniquely identifies the service.",103-unique-id,wired-eliv3,0.58,0.42,0.78
+"Some ports are well-known. These are commonly used by standard services. Traditionally... ports 0 through 1,023 are considered well-known ports.",104-well-known,wired-eliv3,0.55,0.42,0.78
+"Many common services use those. But services can technically run on any port.",105-any-port,wired-eliv3,0.55,0.42,0.78
+"You can run a web server on port 8080. You can run SSH on port 2222.",106-custom-ports,wired-eliv3,0.55,0.42,0.78
+"Changing a port is not real security... but it might reduce random scanning.",107-not-security,wired-eliv3,0.55,0.42,0.78
+"However... attackers can still discover open ports through scanning tools. So ports are not a security mechanism by themselves. They are an addressing mechanism for applications.",108-addressing,wired-eliv3,0.55,0.40,0.78
+"Now let's talk about client ports.",109-client-ports,wired-eliv3,0.58,0.45,0.78
+"When your laptop connects to a server... the server is listening on a well-known destination port. But your laptop also needs a port number.",110-laptop-port,wired-eliv3,0.55,0.42,0.78
+"Because the server needs a way to send the response back.",111-response-back,wired-eliv3,0.55,0.42,0.78
+"The client port is usually chosen randomly from a high range. These are called ephemeral ports.",112-ephemeral,wired-eliv3,0.55,0.42,0.78
+"They're temporary. They exist for the duration of that conversation. Then they go away.",113-temporary,wired-eliv3,0.55,0.42,0.78
+"If you connect again later... you'll likely use a different client port.",114-different-port,wired-eliv3,0.55,0.42,0.78
+"So when you capture traffic... you'll often see something like... client IP, client ephemeral port, going to server IP, server well-known port. That's normal. It's how multiplexing works.",115-capture-traffic,wired-eliv3,0.55,0.40,0.78
+"Let's use a concrete example.",116-example-intro,wired-eliv3,0.58,0.45,0.78
+"Your client is 10.0.0.1. Your server is 10.0.0.2. The server runs a web service on TCP port 80.",117-example-setup,wired-eliv3,0.55,0.42,0.78
+"When your client requests a webpage... your client might pick a random port like 51,234.",118-random-port,wired-eliv3,0.55,0.42,0.78
+"So the connection might look like this... 10.0.0.1 port 51234 connects to 10.0.0.2 port 80 using TCP.",119-connection-look,wired-eliv3,0.55,0.40,0.78
+"That tells us everything. Who sent it. Who receives it. Which service receives it. And how the server can respond to the correct client conversation.",120-tells-everything,wired-eliv3,0.58,0.42,0.78
+"Now let's expand this to multiple services.",121-multiple-services,wired-eliv3,0.58,0.45,0.78
+"Imagine the server runs three services. A website on TCP port 80. An email service on TCP port 143. And a real-time voice service on UDP port 5004.",122-three-services,wired-eliv3,0.55,0.42,0.78
+"Your client can talk to all of them at once.",123-all-at-once,wired-eliv3,0.55,0.42,0.78
+"The destination ports are fixed because the server listens there. But your client will use different ephemeral ports for each conversation.",124-different-ephemeral,wired-eliv3,0.55,0.40,0.78
+"So you might see... 10.0.0.1 port 51001 to 10.0.0.2 port 80 TCP for web.",125-web-example,wired-eliv3,0.55,0.42,0.78
+"10.0.0.1 port 51002 to 10.0.0.2 port 143 TCP for email.",126-email-example,wired-eliv3,0.55,0.42,0.78
+"10.0.0.1 port 51003 to 10.0.0.2 port 5004 UDP for voice.",127-voice-example,wired-eliv3,0.55,0.42,0.78
+"Same client. Same server. Different applications. Different port numbers. Different protocol behaviors.",128-same-different,wired-eliv3,0.55,0.42,0.78
+"And all of this happens simultaneously without mixing the data. That's the power of IP plus TCP and UDP.",129-power,wired-eliv3,0.58,0.42,0.78
+"Now let's connect this back to troubleshooting.",130-troubleshoot-intro,wired-eliv3,0.58,0.45,0.78
+"When something fails on a network... you often troubleshoot in layers.",131-troubleshoot-layers,wired-eliv3,0.55,0.42,0.78
+"First... do we have a link? Is the cable plugged in? Is Wi-Fi connected? Is the interface up?",132-layer-link,wired-eliv3,0.55,0.42,0.78
+"Next... do we have IP? Do we have a valid IP address? A correct subnet mask? A default gateway?",133-layer-ip,wired-eliv3,0.55,0.42,0.78
+"Next... can we reach other IPs? Can we ping the gateway? Can we ping a known server?",134-layer-reach,wired-eliv3,0.55,0.42,0.78
+"Then... do we have DNS working? Because users don't type IP addresses. They type names.",135-layer-dns,wired-eliv3,0.55,0.42,0.78
+"Finally... do we have application connectivity? Are the right ports open? Is the service actually running? Is a firewall blocking it?",136-layer-app,wired-eliv3,0.55,0.40,0.78
+"So even though this is just a primer... this information is what helps you logically troubleshoot instead of guessing.",137-logical,wired-eliv3,0.58,0.42,0.78
+"Let's also briefly mention the OSI model.",138-osi-intro,wired-eliv3,0.58,0.45,0.78
+"For Network+ and higher... you'll hear people label TCP and UDP as Layer 4 and IP as Layer 3.",139-osi-layers,wired-eliv3,0.55,0.42,0.78
+"For the A+ exam... you don't need to memorize every OSI detail. But you should recognize these terms when you see them.",140-osi-exam,wired-eliv3,0.55,0.42,0.78
+"The important part is understanding the jobs they do. IP routes. TCP and UDP transport. Ports identify services. And everything is encapsulated inside something else.",141-jobs,wired-eliv3,0.55,0.40,0.78
+"Now let's return to encapsulation one more time... because this is a common confusing concept.",142-encap-return,wired-eliv3,0.58,0.45,0.78
+"When you send web traffic... you're not sending HTTP on its own.",143-not-alone,wired-eliv3,0.55,0.42,0.78
+"You're sending HTTP inside TCP. TCP inside IP. IP inside Ethernet or Wi-Fi.",144-inside-inside,wired-eliv3,0.55,0.42,0.78
+"Each layer adds its own header. That means when you capture traffic... you'll see multiple headers.",145-multiple-headers,wired-eliv3,0.55,0.42,0.78
+"Ethernet header. IP header. TCP header. Then the data.",146-header-list,wired-eliv3,0.55,0.42,0.78
+"The receiver removes each header as it moves up the stack. That's decapsulation.",147-decapsulation,wired-eliv3,0.55,0.42,0.78
+"And that's why different devices on the path care about different information.",148-different-info,wired-eliv3,0.58,0.42,0.78
+"A switch cares about Ethernet. A router cares about IP. A firewall might care about IP and ports. The server cares about ports and application data.",149-who-cares,wired-eliv3,0.55,0.40,0.78
+"So let's recap the whole story.",150-recap-intro,wired-eliv3,0.58,0.45,0.78
+"Networks move information. The physical method might be Ethernet or Wi-Fi. But the common language inside is usually IP.",151-recap-1,wired-eliv3,0.55,0.42,0.78
+"IP is how we address and route traffic. To reach services on a device... we use port numbers.",152-recap-2,wired-eliv3,0.55,0.42,0.78
+"TCP and UDP carry application conversations. TCP is connection-oriented and reliable. UDP is connectionless and low overhead.",153-recap-3,wired-eliv3,0.55,0.42,0.78
+"Clients use ephemeral ports. Servers use well-known or configured ports.",154-recap-4,wired-eliv3,0.55,0.42,0.78
+"And all of this relies on encapsulation and decapsulation to work.",155-recap-5,wired-eliv3,0.55,0.42,0.78
+"Once you understand this... Domain 2 networking becomes much easier. Because instead of memorizing random facts... you understand how the system actually works.",156-easier,wired-eliv3,0.58,0.40,0.78
+"Thanks for watching Wired Workshop.",157-thanks,wired-eliv3,0.58,0.45,0.78
+"If this primer helped you understand IP, TCP, UDP, encapsulation, and ports... hit like, subscribe, and let's keep learning the wires.",158-outro,wired-eliv3,0.58,0.42,0.78

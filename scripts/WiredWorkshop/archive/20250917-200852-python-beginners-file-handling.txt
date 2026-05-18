@@ -1,0 +1,38 @@
+eli-neutral: WiredWorkshop Python Beginners Course — Lesson Six: File Handling.
+eli-neutral: Welcome back to WiredWorkshop.
+eli-neutral: So far your programs only held data while running; then it disappeared.
+eli-neutral: Today we learn file handling so data can persist: reading and writing files.
+
+eli-neutral: The open function.
+eli-neutral: Open files in different modes: read, write, append, or binary for non text.
+eli-neutral: Use the with statement to open files; it closes them automatically.
+
+eli-neutral: Reading files.
+eli-neutral: Read the whole file at once, read line by line, or read all lines into a list.
+
+eli-neutral: Writing files.
+eli-neutral: Create or overwrite a file with new content.
+eli-neutral: Appending adds new content to the end without deleting existing data.
+
+eli-neutral: Error handling.
+eli-neutral: Some files do not exist or access is denied.
+eli-neutral: Use try and except to catch File Not Found and other errors and handle them gracefully.
+
+eli-neutral: Project: to do list app.
+eli-neutral: On start, load tasks from a file.
+eli-neutral: View tasks, add new ones, and save every change back to the file.
+eli-neutral: Your list persists across runs, like a real app that remembers between sessions.
+
+eli-neutral: Recap.
+eli-neutral: Open files safely with with; choose the right mode: read, write, append, or binary.
+eli-neutral: Read data, write or append data, and handle errors with try and except.
+eli-neutral: Combine these ideas to manage tasks in a text file.
+
+eli-neutral: Next time we work with structured formats like CSV and JSON.
+eli-neutral: You will save and load more complex data in formats that resemble databases.
+
+eli-neutral: Thanks for watching WiredWorkshop.
+eli-neutral: Keep learning the wires.
+
+
+

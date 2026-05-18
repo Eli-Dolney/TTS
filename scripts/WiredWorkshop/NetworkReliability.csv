@@ -1,0 +1,92 @@
+text,filename,voice,exaggeration,cfg_weight,temperature
+"Hello and welcome back to Wired Workshop!",001-intro,wired-eliv3,0.55,0.4,0.8
+"My name is Gemini, and today we’re going to talk about something we all take for granted until the moment it fails: network reliability.",002-topic-intro,wired-eliv3,0.55,0.4,0.8
+"Think about the last time you were watching the season finale of your favorite show and the streaming service suddenly froze.",003-streaming-freeze,wired-eliv3,0.55,0.4,0.8
+"Or when you were on an important video call with your boss and your voice kept cutting out.",004-video-call-cutouts,wired-eliv3,0.55,0.4,0.8
+"Or worse, when you heard on the news that a major company had its data stolen.",005-data-breach-news,wired-eliv3,0.55,0.4,0.8
+"These aren't just minor annoyances; they are failures of the network to perform its job.",006-not-minor-annoyances,wired-eliv3,0.55,0.4,0.8
+"A network isn't just about connecting devices.",007-not-just-connecting,wired-eliv3,0.55,0.4,0.8
+"A truly modern, professional network must be more than just connected; it has to be dependable.",008-has-to-be-dependable,wired-eliv3,0.55,0.4,0.8
+"In the world of network engineering, this dependability is built on a foundation of thoughtful design, often called Network Architecture.",009-network-architecture,wired-eliv3,0.55,0.4,0.8
+"It’s the difference between just throwing up a building and hiring an architect to design a skyscraper that can withstand earthquakes, handle growth, prioritize VIP service, and be secure from top to bottom.",010-architect-analogy,wired-eliv3,0.55,0.4,0.8
+"Today, we are going to explore the four essential pillars of a reliable network architecture: Fault Tolerance, Scalability, Quality of Service, and Security.",011-four-pillars,wired-eliv3,0.55,0.4,0.8
+"By the end of this video, you'll understand the core principles that engineers use to design the robust and trustworthy networks that power our digital lives.",012-outcome,wired-eliv3,0.55,0.4,0.8
+"Pillar 1: Fault Tolerance - The Art of Never Failing.",013-pillar1-title,wired-eliv3,0.58,0.38,0.8
+"Fault tolerance is the ability of a network to continue operating even when a device or a link fails.",014-fault-tolerance-def,wired-eliv3,0.55,0.4,0.8
+"It's about building a network that expects failure and is prepared to handle it seamlessly, without interrupting service for the users.",015-expects-failure,wired-eliv3,0.55,0.4,0.8
+"The goal is to eliminate any single point of failure.",016-eliminate-spof,wired-eliv3,0.55,0.4,0.8
+"Imagine a city that has only one bridge to get across a river.",017-one-bridge,wired-eliv3,0.55,0.4,0.8
+"If that bridge closes for repairs or collapses, the entire city is crippled.",018-bridge-closes,wired-eliv3,0.55,0.4,0.8
+"That single bridge is a single point of failure.",019-single-point,wired-eliv3,0.55,0.4,0.8
+"A fault-tolerant city has multiple bridges and maybe a tunnel.",020-multiple-bridges,wired-eliv3,0.55,0.4,0.8
+"If the main bridge goes down, traffic can be instantly re-routed over the other bridges.",021-reroute-traffic,wired-eliv3,0.55,0.4,0.8
+"The city continues to function.",022-city-continues,wired-eliv3,0.55,0.4,0.8
+"Networks achieve this through redundancy.",023-redundancy-key,wired-eliv3,0.55,0.4,0.8
+"A fault-tolerant network has redundant equipment and links.",024-redundant-equipment,wired-eliv3,0.55,0.4,0.8
+"There isn't just one router connecting an office to the internet; there are two.",025-two-routers,wired-eliv3,0.55,0.4,0.8
+"There isn't just one cable connecting two critical switches; there are multiple paths.",026-multiple-paths,wired-eliv3,0.55,0.4,0.8
+"If one device or path fails, the network protocols automatically re-route traffic through a working path.",027-protocols-reroute,wired-eliv3,0.55,0.4,0.8
+"This principle is at the heart of how the internet was designed.",028-internet-design,wired-eliv3,0.55,0.4,0.8
+"The internet is a packet-switched network.",029-packet-switched,wired-eliv3,0.55,0.4,0.8
+"When you send a large piece of data, it’s broken down into many tiny packets.",030-packets,wired-eliv3,0.55,0.4,0.8
+"Each packet is individually addressed and sent into the network.",031-packet-addressed,wired-eliv3,0.55,0.4,0.8
+"Because of redundancy, packets can take completely different paths to get to their destination.",032-packets-different-paths,wired-eliv3,0.55,0.4,0.8
+"If a router goes offline, your packets are routed around the problem.",033-router-offline,wired-eliv3,0.55,0.4,0.8
+"Once all the packets arrive, the receiving computer reassembles them in the correct order.",034-reassemble,wired-eliv3,0.55,0.4,0.8
+"Packet switching makes the internet incredibly resilient and fault-tolerant.",035-resilient-fault-tolerant,wired-eliv3,0.55,0.4,0.8
+"Pillar 2: Scalability - Designing for Growth.",036-pillar2-title,wired-eliv3,0.58,0.38,0.8
+"A scalable network can grow over time to support new users and services without a complete redesign.",037-scalability-def,wired-eliv3,0.55,0.4,0.8
+"It’s about planning for the future.",038-plan-for-future,wired-eliv3,0.55,0.42,0.8
+"A well-planned city designs its infrastructure not just for today, but for tomorrow’s neighborhoods and skyscrapers.",039-city-planning,wired-eliv3,0.55,0.4,0.8
+"A city that isn’t scalable suffers gridlock and outages as soon as it grows.",040-city-not-scalable,wired-eliv3,0.55,0.4,0.8
+"A network architect must think the same way.",041-architect-think,wired-eliv3,0.55,0.4,0.8
+"A network for 50 employees today should gracefully expand to support 500 or 5,000.",042-expand-gracefully,wired-eliv3,0.55,0.4,0.8
+"This is achieved with hierarchical and modular design.",043-hierarchical-modular,wired-eliv3,0.55,0.4,0.8
+"Instead of a flat, messy network, build in layers.",044-build-in-layers,wired-eliv3,0.55,0.4,0.8
+"A common model is three layers: Access, Distribution, and Core.",045-three-layers,wired-eliv3,0.55,0.4,0.8
+"The Access Layer is where users connect.",046-access-layer,wired-eliv3,0.55,0.4,0.8
+"The Distribution Layer connects different parts of the network.",047-distribution-layer,wired-eliv3,0.55,0.4,0.8
+"The Core Layer is the super-fast backbone for the entire network.",048-core-layer,wired-eliv3,0.55,0.4,0.8
+"This modular approach lets engineers upgrade one layer without disrupting the entire network.",049-modular-benefit,wired-eliv3,0.55,0.4,0.8
+"Scalable networks use globally accepted standards and protocols.",050-standards-protocols,wired-eliv3,0.55,0.4,0.8
+"You can buy a switch from one company and a router from another and they will communicate perfectly.",051-multi-vendor,wired-eliv3,0.55,0.4,0.8
+"This prevents vendor lock-in and lets you integrate new technologies as you grow.",052-avoid-lockin,wired-eliv3,0.55,0.4,0.8
+"Pillar 3: Quality of Service (QoS) - Managing the Traffic.",053-pillar3-title,wired-eliv3,0.58,0.38,0.8
+"QoS is the network’s ability to prioritize certain types of traffic over others.",054-qos-definition,wired-eliv3,0.55,0.4,0.8
+"The key principle is that not all data is created equal.",055-not-all-data-equal,wired-eliv3,0.55,0.4,0.8
+"Think about a highway during rush hour: an ambulance gets priority.",056-ambulance-analogy,wired-eliv3,0.57,0.38,0.8
+"QoS is how the network creates priority express lanes.",057-express-lanes,wired-eliv3,0.55,0.4,0.8
+"Some applications are extremely sensitive to latency.",058-latency-sensitive,wired-eliv3,0.55,0.4,0.8
+"Video conferencing and Voice over IP require a steady, uninterrupted stream of data.",059-rtc-requirements,wired-eliv3,0.55,0.4,0.8
+"Even tiny delays of a few milliseconds can cause robotic voices and frozen video.",060-ms-matters,wired-eliv3,0.55,0.4,0.8
+"Email is not time-sensitive; if it arrives two seconds later, nobody notices.",061-email-not-sensitive,wired-eliv3,0.55,0.4,0.8
+"QoS policies classify traffic by type.",062-classify-traffic,wired-eliv3,0.55,0.4,0.8
+"Routers and switches identify packets from video calls, large downloads, and web browsing.",063-identify-packets,wired-eliv3,0.55,0.4,0.8
+"When the network is congested, queuing algorithms manage the traffic.",064-queuing-algorithms,wired-eliv3,0.55,0.4,0.8
+"High-priority packets go into a priority queue and are sent first.",065-priority-queue,wired-eliv3,0.55,0.4,0.8
+"Low-priority packets wait their turn.",066-low-priority-wait,wired-eliv3,0.55,0.4,0.8
+"This ensures critical, real-time applications maintain quality even when the network is busy.",067-preserve-quality,wired-eliv3,0.55,0.4,0.8
+"Pillar 4: Network Security - Protecting the Assets.",068-pillar4-title,wired-eliv3,0.58,0.38,0.8
+"A network can be resilient, scalable, and have flawless QoS, but if it’s not secure, it’s a liability.",069-security-liability,wired-eliv3,0.55,0.4,0.8
+"Network security protects the infrastructure and the sensitive data traveling across it.",070-security-protects,wired-eliv3,0.55,0.4,0.8
+"Securing your home uses layers: a strong lock, an alarm, curtains for privacy, and a safe.",071-home-layers,wired-eliv3,0.55,0.4,0.8
+"Network security is layered too.",072-security-layered,wired-eliv3,0.55,0.4,0.8
+"The core goals are the CIA Triad: Confidentiality, Integrity, and Availability.",073-cia-triad,wired-eliv3,0.55,0.4,0.8
+"Confidentiality ensures only the intended recipient can read the data.",074-confidentiality,wired-eliv3,0.55,0.4,0.8
+"Encryption is the primary tool, scrambling data that can only be unlocked with a secret key.",075-encryption,wired-eliv3,0.55,0.4,0.8
+"Integrity ensures the data has not been modified or tampered with in transit.",076-integrity,wired-eliv3,0.55,0.4,0.8
+"It guarantees the message received is exactly what was sent.",077-integrity-guarantee,wired-eliv3,0.55,0.4,0.8
+"Availability ensures the network and its services are up and accessible to legitimate users.",078-availability,wired-eliv3,0.55,0.4,0.8
+"This includes defending against attacks designed to shut it down, like Denial-of-Service.",079-defend-dos,wired-eliv3,0.55,0.4,0.8
+"Engineers deploy firewalls, access control lists, and robust authentication systems.",080-tools-examples,wired-eliv3,0.55,0.4,0.8
+"Let’s recap the four pillars of a reliable network architecture.",081-recap-title,wired-eliv3,0.57,0.38,0.8
+"First, Fault Tolerance uses redundancy to keep the network working even when things fail.",082-recap-fault-tolerance,wired-eliv3,0.55,0.4,0.8
+"Second, Scalability uses hierarchical design so the network can grow without breaking.",083-recap-scalability,wired-eliv3,0.55,0.4,0.8
+"Third, Quality of Service prioritizes critical traffic to ensure a good user experience.",084-recap-qos,wired-eliv3,0.55,0.4,0.8
+"Finally, Security protects our data through confidentiality, integrity, and availability.",085-recap-security,wired-eliv3,0.55,0.4,0.8
+"Modern networks that millions depend on are the result of careful planning and these principles.",086-modern-networks,wired-eliv3,0.55,0.4,0.8
+"They build networks that aren’t just connected, but truly dependable.",087-truly-dependable,wired-eliv3,0.55,0.4,0.8
+"Thanks for joining me today at Wired Workshop.",088-outro-thanks,wired-eliv3,0.55,0.4,0.8
+"If this video helped you, hit like and subscribe for more.",089-outro-cta,wired-eliv3,0.56,0.4,0.8
+"As always, drop your questions in the comments below.",090-outro-questions,wired-eliv3,0.55,0.4,0.8
+"Until next time, keep learning!",091-outro-keep-learning,wired-eliv3,0.55,0.4,0.8

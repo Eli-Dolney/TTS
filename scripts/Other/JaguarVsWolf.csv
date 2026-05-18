@@ -1,0 +1,93 @@
+text,filename,voice,exaggeration,cfg_weight,temperature
+"Two jaguars.",001-intro,other-news,0.60,0.44,0.82
+"Two shadows moving silently through thick forest undergrowth.",002-shadows,other-news,0.58,0.42,0.82
+"They are not running. They don't need to.",003-no-rush,other-news,0.58,0.44,0.82
+"Everything around them already belongs to them.",004-theirs,other-news,0.60,0.42,0.82
+"These are Jaguar... the most powerful predators in the Americas.",005-powerful,other-news,0.62,0.40,0.82
+"Stocky. Heavy. Built like muscle wrapped in fur.",006-built,other-news,0.60,0.44,0.82
+"Each one weighs over two hundred pounds... with thick forearms and shoulders designed for explosive bursts of violence.",007-weight,other-news,0.60,0.42,0.82
+"They don't chase prey across miles. They ambush. They strike once. And the fight ends.",008-ambush,other-news,0.62,0.42,0.82
+"A jaguar's bite is legendary.",009-bite,other-news,0.62,0.44,0.82
+"Not a suffocating throat hold like other big cats. A crushing bite.",010-crushing,other-news,0.60,0.42,0.82
+"Strong enough to pierce skulls and break bone.",011-skulls,other-news,0.62,0.42,0.82
+"If a jaguar grabs you cleanly... you don't get a second chance.",012-no-chance,other-news,0.62,0.40,0.82
+"But tonight... they're not alone at the top of the food chain.",013-not-alone,other-news,0.60,0.42,0.82
+"Because watching from the treeline... is a pack of Timber wolf.",014-wolves,other-news,0.62,0.40,0.82
+"Lean shapes. Long legs. Cold eyes.",015-lean,other-news,0.58,0.44,0.82
+"Individually... each wolf is half the size of a jaguar. Eighty... maybe a hundred pounds.",016-individual,other-news,0.58,0.42,0.82
+"On their own... they would never challenge a cat like this.",017-never-alone,other-news,0.60,0.42,0.82
+"But wolves don't fight alone. They hunt as one mind.",018-one-mind,other-news,0.62,0.42,0.82
+"Six. Seven. Maybe nine of them.",019-count,other-news,0.58,0.44,0.82
+"Not tanks. Not powerhouses. But built for something far more dangerous.",020-endurance-intro,other-news,0.60,0.42,0.82
+"Endurance.",021-endurance,other-news,0.62,0.44,0.82
+"They can run for miles without slowing. They rotate attackers. They distract. They harass. They exhaust.",022-rotate,other-news,0.60,0.42,0.82
+"They don't need one perfect kill. They just need their enemy to get tired.",023-tired,other-news,0.62,0.40,0.82
+"And that's something even a jaguar can't avoid.",024-cant-avoid,other-news,0.62,0.42,0.82
+"The wolves spread out first. No rush. No charge.",025-spread,other-news,0.58,0.42,0.82
+"They form a wide circle... moving like drifting smoke between the trees.",026-circle,other-news,0.58,0.40,0.82
+"The jaguars notice immediately.",027-notice,other-news,0.60,0.44,0.82
+"Both cats stop walking. Their heads lift. Ears forward. Tails low.",028-stop,other-news,0.58,0.42,0.82
+"They don't panic. They don't retreat.",029-no-panic,other-news,0.60,0.42,0.82
+"Instead... they stand back to back.",030-back-to-back,other-news,0.62,0.40,0.82
+"Two predators. Covering every angle.",031-cover,other-news,0.60,0.42,0.82
+"The wolves test the perimeter.",032-test,other-news,0.58,0.44,0.82
+"One darts forward, then back. Another moves behind. A third slips closer through brush.",033-darts,other-news,0.60,0.42,0.82
+"They're looking for one thing. Separation.",034-separation,other-news,0.62,0.40,0.82
+"Because together... the jaguars are terrifying.",035-terrifying,other-news,0.62,0.42,0.82
+"Four hundred pounds of muscle and claws. Two sets of jaws that can crush bone.",036-force,other-news,0.60,0.42,0.82
+"Any wolf that gets too close could die instantly.",037-die,other-news,0.62,0.42,0.82
+"Minutes pass. The tension stretches.",038-tension,other-news,0.58,0.40,0.82
+"Then it happens.",039-happens,other-news,0.62,0.44,0.82
+"A young wolf lunges too far. Just a little too bold.",040-lunges,other-news,0.62,0.40,0.82
+"One jaguar explodes forward. Not a run. A launch.",041-explodes,other-news,0.64,0.38,0.82
+"A blur of yellow and black.",042-blur,other-news,0.62,0.42,0.82
+"The wolf tries to turn... but it's too late.",043-too-late,other-news,0.62,0.40,0.82
+"The cat slams it to the ground. One bite. A sickening crunch. And it's over.",044-crunch,other-news,0.64,0.38,0.82
+"The entire pack jumps back at once.",045-jump-back,other-news,0.60,0.42,0.82
+"They just learned the rule. Close range equals death.",046-rule,other-news,0.62,0.40,0.82
+"So they adapt.",047-adapt,other-news,0.60,0.44,0.82
+"Now they stay farther away. They start circling faster.",048-circle-faster,other-news,0.58,0.42,0.82
+"Forcing the jaguars to turn. Again. And again. And again.",049-again,other-news,0.60,0.40,0.82
+"Every time a wolf feints... the cats react. Every reaction costs energy.",050-costs,other-news,0.60,0.42,0.82
+"A snap at the hind legs. A quick retreat.",051-snap,other-news,0.58,0.42,0.82
+"Another fake charge from the opposite side.",052-fake,other-news,0.60,0.42,0.82
+"The jaguars swipe at air. Miss. Turn. Miss again.",053-miss,other-news,0.60,0.42,0.82
+"The wolves are playing a long game.",054-long-game,other-news,0.62,0.40,0.82
+"They aren't trying to win right now. They're trying to win later.",055-later,other-news,0.60,0.42,0.82
+"Ten minutes pass.",056-ten-min,other-news,0.58,0.44,0.82
+"The jaguars are still lethal... but they're breathing harder.",057-breathing,other-news,0.60,0.42,0.82
+"Their movements aren't quite as sharp. The wolves notice everything.",058-notice-all,other-news,0.58,0.42,0.82
+"Now the nips get closer.",059-nips,other-news,0.62,0.42,0.82
+"A bite to the flank. A quick tear at the rear leg. Not deep.",060-flank,other-news,0.60,0.42,0.82
+"But enough to sting. Enough to slow.",061-slow,other-news,0.60,0.42,0.82
+"Because wolves know something cats hate. A drawn-out fight.",062-drawn-out,other-news,0.62,0.40,0.82
+"Big cats are sprinters. Wolves are marathon runners.",063-sprinters,other-news,0.62,0.42,0.82
+"Then comes the mistake.",064-mistake,other-news,0.62,0.42,0.82
+"One jaguar finally commits to a full charge.",065-commits,other-news,0.62,0.40,0.82
+"It chases a wolf too far. Just a few extra steps.",066-too-far,other-news,0.60,0.42,0.82
+"But that's all it takes.",067-takes,other-news,0.62,0.44,0.82
+"The two cats aren't touching anymore. There's space between them.",068-space,other-news,0.60,0.42,0.82
+"And wolves live for space.",069-live-for,other-news,0.62,0.42,0.82
+"Three rush in instantly.",070-three-rush,other-news,0.64,0.38,0.82
+"One snaps at the back leg. Another grabs fur at the flank. Another distracts from the front.",071-attack,other-news,0.62,0.40,0.82
+"The jaguar spins, slashing, roaring... claws cutting air and flesh.",072-spins,other-news,0.64,0.38,0.82
+"It injures one wolf badly. But it can't focus.",073-injures,other-news,0.60,0.42,0.82
+"Every time it turns to attack one... another bites from behind.",074-behind,other-news,0.62,0.40,0.82
+"The second jaguar charges in to help... scattering the pack again.",075-second,other-news,0.62,0.40,0.82
+"But now both cats are exhausted. Breathing heavy. Blood starting to show through fur.",076-exhausted,other-news,0.60,0.42,0.82
+"The wolves... are barely winded.",077-barely,other-news,0.62,0.40,0.82
+"They keep rotating. Fresh legs. Fresh attackers. Pressure that never stops.",078-rotating,other-news,0.60,0.42,0.82
+"And that's the difference.",079-difference,other-news,0.62,0.42,0.82
+"If this fight happened fast... if the wolves rushed in carelessly... the jaguars would win easily.",080-if-fast,other-news,0.60,0.40,0.82
+"One or two clean grabs... and it's over.",081-clean,other-news,0.60,0.42,0.82
+"But wolves aren't careless. They're patient. Relentless.",082-patient,other-news,0.62,0.42,0.82
+"They turn strength into weakness.",083-strength,other-news,0.62,0.40,0.82
+"They stretch seconds into minutes... minutes into hours.",084-stretch,other-news,0.60,0.40,0.82
+"Until even the strongest predator slows down.",085-slows,other-news,0.62,0.42,0.82
+"And once a jaguar can't sprint... can't explode... its greatest advantage disappears.",086-advantage,other-news,0.62,0.40,0.82
+"In a short, brutal clash... the jaguars dominate.",087-short,other-news,0.62,0.42,0.82
+"In a long, grinding battle... the pack takes control.",088-long,other-news,0.62,0.40,0.82
+"Because power wins the first strike. But teamwork... wins the war.",089-teamwork,other-news,0.64,0.40,0.82
+"So if two jaguars truly faced a full timberwolf pack deep in the wild... the outcome wouldn't be decided by strength alone.",090-outcome,other-news,0.60,0.40,0.82
+"It would be decided by time.",091-time,other-news,0.62,0.42,0.82
+"And time... belongs to the wolves.",092-finale,other-news,0.64,0.40,0.82

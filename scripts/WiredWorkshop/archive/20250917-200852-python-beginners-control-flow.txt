@@ -1,0 +1,63 @@
+Welcome back to WiredWorkshop. In our last lesson, you built your foundation. You learned how to set up your Python environment, print messages to the screen, store information in variables, and even build a simple, interactive calculator. You learned the basic grammar of Python. Today, we’re going to teach our programs how to think.
+
+This lesson is all about control flow. It’s a term for how we direct the path of our program’s execution. Right now, your programs run like a straight road—they start at the first line and execute every single line until they reach the end. But real-world problems aren’t so linear. They require choices, detours, and repetitions. Control flow gives us the traffic signals, the forks in the road, and the roundabouts that let our code navigate complex tasks.
+
+By the end of this lesson, you'll be able to make your programs make decisions using conditional statements and repeat actions automatically with loops. We’ll bring it all together by building a classic number-guessing game—a program that feels truly alive because it can react and respond to a user’s actions over multiple turns. This is where your code stops being just a script and starts becoming a dynamic application.
+
+The Foundation: Booleans and Comparisons
+Before a program can make a decision, it needs a way to understand the concepts of "yes" and "no," or more accurately, true and false. In programming, we have a special data type for this called a Boolean. A Boolean value can only be one of two things: True or False. That's it. This simple, binary concept is the bedrock of all logic in computing. Is the user logged in? True. Is the file saved? False. Every complex decision your computer makes boils down to a series of these fundamental true/false checks.
+
+So, how do we get these True or False values? We get them by asking questions, or making comparisons. We use comparison operators to compare two values. You can check if two numbers are equal, or if one is greater than the other. You can check if two strings are exactly the same. Each of these comparisons evaluates to a Boolean. Five equals five? The result is True. Ten is less than three? The result is False. These operators are the tools you use to ask the questions that guide your program's logic.
+
+But what if you need to ask a more complex question? That's where logical operators—and, or, and not—come into play. and is like a strict bouncer at a club: both conditions on either side of it must be True to get in. For example, age >= 21 and has_ID == True. or is more relaxed, like an all-you-can-eat buffet: you only need one of the conditions to be True. For example, is_premium_member or order_total > 50. Finally, not simply flips a Boolean's value. It turns True into False and False into True. These three little words are the glue that lets you combine simple checks into sophisticated, real-world rules.
+
+Making Decisions: if, elif, and else
+Now that we have our True or False answers, what do we do with them? We use them to direct traffic with an if statement. An if statement is the most basic form of decision-making. It says, "If this condition is true, then run this specific block of code."
+
+Think of it as a fork in the road. If the weather is sunny, you take the path to the park. But what if it isn't? You can add an else block, which acts as the default path. else says, "If the if condition was false, then run this other block of code instead." So, if it’s sunny, go to the park; otherwise, go to the museum.
+
+But life often has more than two options. What if it’s not sunny, but it’s not raining either—it’s just cloudy? For this, we have elif, which is short for "else if." You can chain multiple elif statements together to check for several different conditions in order. For example: if the score is above 90, it's an 'A'. elif the score is above 80, it's a 'B'. elif the score is above 70, it's a 'C'. And finally, else (if none of the above were true), it's a 'D'.
+
+The crucial thing to remember is that Python checks these conditions from top to bottom and stops at the first one that's true. Once it finds a true condition and runs its code block, it skips the rest of the chain completely. This is why the order of your if and elif statements can be very important.
+
+A Python Shortcut: Truthy and Falsy Values
+Here’s a concept that makes Python code clean and elegant: truthiness. In Python, you don’t always need to write an explicit comparison that results in True or False. Certain values have an inherent sense of being "truthy" or "falsy."
+
+The rule is simple: values that are "empty" or represent "nothingness" are considered falsy. This includes the number 0, an empty string "", an empty list, and the special value None.
+
+Everything else is considered truthy. Any non-zero number, any string with characters in it, any list with items inside—these are all treated as True when used in a condition. This allows for a very common and readable shortcut. Instead of writing if username != "", you can just write if username. This code asks, "Does this username variable contain something?" It’s a more concise and "Pythonic" way of checking for the existence of data.
+
+Repeating Actions: The while Loop
+Decision-making is powerful, but what really unleashes the power of a computer is its ability to perform tasks over and over again at incredible speeds. This is done with loops.
+
+The first type of loop is the while loop. A while loop is controlled by a condition, just like an if statement. It works like this: "While this condition is true, keep executing this block of code." Think of the condition as a guard at a gate. Before each pass, the guard checks your condition. If it’s true, you're allowed to run through the loop's body one more time. The moment the condition becomes false, the guard closes the gate, and the program continues on its way.
+
+The classic example is a countdown. while the count is greater than zero, print the count and then subtract one from it. This last part is critical. Something inside the loop must eventually change the condition to make it false. If you forget, you create an infinite loop—a loop that never ends, causing your program to get stuck.
+
+Sometimes you need more control inside a loop. The break keyword is your emergency exit. It immediately terminates the loop, no matter what the condition says. The continue keyword is different; it just skips the rest of the current iteration and jumps right back to the top of the loop to start the next pass.
+
+The for Loop: Iterating Through Collections
+The other major type of loop is the for loop. While a while loop is great when you don't know how many times you need to repeat, a for loop is perfect for when you have a specific collection of items you want to go through, one by one.
+
+Think of it as an assembly line. You have a collection of items—like the letters in a string, the items in a list, or a sequence of numbers. The for loop takes each item from the collection, places it on the conveyor belt for you to process, and continues until all the items have been handled.
+
+One of the most common ways to use a for loop is with Python's range() function. range() generates a sequence of numbers for you, making it incredibly easy to write a loop that runs exactly ten times, or counts from 50 to 100. It’s precise and predictable. This makes for loops the ideal choice when you need to iterate over a known set of data.
+
+Our Mini-Project: The Number Guessing Game
+Alright, it's time to put all these pieces together. We're going to build a number guessing game.
+
+Here's the plan: First, the program will secretly choose a random number. Then, it will use a loop to give the player a limited number of attempts, say, seven. Inside that loop, it will ask the player for their guess. Then comes the brain of our game: an if/elif/else block. It will compare the player's guess to the secret number. if the guess is too low, it will print a hint. elif the guess is too high, it will print a different hint. else, if it's neither too high nor too low, it must be correct! In that case, we'll congratulate the player and use the break keyword to exit the loop early.
+
+If the loop finishes all its turns without a correct guess, a final message will reveal the secret number. This project combines variables, random numbers, a loop to control the game's flow, user input to make it interactive, and conditional logic to provide feedback. It's the perfect demonstration of everything we've covered today.
+
+Wrap-Up
+Let's recap. Today you unlocked the ability for your programs to think and repeat. You learned that Booleans and comparisons are the foundation of logic. You learned how to combine these checks with logical operators like and, or, and not. You mastered the if, elif, and else statements to guide your program down different paths. And you learned how to automate repetition with while loops for condition-based execution and for loops for iterating through collections.
+
+You've moved beyond writing simple, linear scripts. You can now write programs that react to data, respond to users, and handle tasks that would be impossible to do manually. The number guessing game is proof that with just these fundamental control flow tools, you can build something genuinely fun and interactive.
+
+In our next lesson, we'll tackle the next giant leap in programming: functions. Functions will allow us to package up our logic into clean, reusable blocks, which is the key to building larger, more organized, and more powerful applications.
+
+You're doing fantastic work. Keep experimenting with these concepts. You now have the tools to build quizzes, simple simulations, or interactive menus. The real learning happens when you start building.
+
+Thanks for learning with WiredWorkshop, and remember—keep learning the wires.
+

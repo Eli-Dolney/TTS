@@ -1,0 +1,29 @@
+text,filename,voice,exaggeration,cfg_weight,temperature
+"One. Exaggeration point four, cfg point six five, temp point seven five. Default fast pace.",001-default-fast,other-aussie,0.40,0.65,0.75
+"Welcome back to the channel. Today we're going to break down something that most people completely overlook.",001b-default-fast-test,other-aussie,0.40,0.65,0.75
+"Two. Exaggeration point four five, cfg point five five, temp point seven eight. Slightly slower.",002-slightly-slower,other-aussie,0.45,0.55,0.78
+"Welcome back to the channel. Today we're going to break down something that most people completely overlook.",002b-slightly-slower-test,other-aussie,0.45,0.55,0.78
+"Three. Exaggeration point five, cfg point five, temp point eight. Medium pace.",003-medium,other-aussie,0.50,0.50,0.80
+"Welcome back to the channel. Today we're going to break down something that most people completely overlook.",003b-medium-test,other-aussie,0.50,0.50,0.80
+"Four. Exaggeration point five, cfg point four five, temp point eight. Medium slow.",004-medium-slow,other-aussie,0.50,0.45,0.80
+"Welcome back to the channel. Today... we're going to break down something that most people completely overlook.",004b-medium-slow-test,other-aussie,0.50,0.45,0.80
+"Five. Exaggeration point five five, cfg point four, temp point eight. Deliberate pace.",005-deliberate,other-aussie,0.55,0.40,0.80
+"Welcome back to the channel. Today... we're going to break down something... that most people completely overlook.",005b-deliberate-test,other-aussie,0.55,0.40,0.80
+"Six. Exaggeration point five five, cfg point three five, temp point eight two. Very deliberate.",006-very-deliberate,other-aussie,0.55,0.35,0.82
+"Welcome back to the channel. Today... we're going to break down something... that most people completely overlook.",006b-very-deliberate-test,other-aussie,0.55,0.35,0.82
+"Seven. Exaggeration point six, cfg point four, temp point eight. More expressive medium.",007-expressive-medium,other-aussie,0.60,0.40,0.80
+"Welcome back to the channel. Today we're going to break down something that most people completely overlook.",007b-expressive-medium-test,other-aussie,0.60,0.40,0.80
+"Eight. Exaggeration point six, cfg point four five, temp point eight two. Expressive narration.",008-expressive-narration,other-aussie,0.60,0.45,0.82
+"Welcome back to the channel. Today... we're going to break down something that most people... completely overlook.",008b-expressive-narration-test,other-aussie,0.60,0.45,0.82
+"Nine. Exaggeration point six five, cfg point four, temp point eight two. High energy narrator.",009-high-energy,other-aussie,0.65,0.40,0.82
+"Welcome back to the channel. Today we're going to break down something that most people completely overlook.",009b-high-energy-test,other-aussie,0.65,0.40,0.82
+"Ten. Exaggeration point six five, cfg point three five, temp point eight five. High energy slow.",010-high-energy-slow,other-aussie,0.65,0.35,0.85
+"Welcome back to the channel. Today... we're going to break down something... that most people completely overlook.",010b-high-energy-slow-test,other-aussie,0.65,0.35,0.85
+"Eleven. Exaggeration point five, cfg point four two, temp point seven eight. Balanced narrator.",011-balanced,other-aussie,0.50,0.42,0.78
+"Welcome back to the channel. Today we're going to break down something... that most people completely overlook.",011b-balanced-test,other-aussie,0.50,0.42,0.78
+"Twelve. Exaggeration point five five, cfg point four two, temp point seven eight. Teacher style.",012-teacher,other-aussie,0.55,0.42,0.78
+"Welcome back to the channel. Today... we're going to break down something that most people completely overlook.",012b-teacher-test,other-aussie,0.55,0.42,0.78
+"Thirteen. Exaggeration point five eight, cfg point four, temp point eight. Documentary style.",013-documentary,other-aussie,0.58,0.40,0.80
+"Welcome back to the channel. Today... we're going to break down something... that most people... completely overlook.",013b-documentary-test,other-aussie,0.58,0.40,0.80
+"Fourteen. Exaggeration point five, cfg point five, temp point eight five. Conversational warm.",014-conversational,other-aussie,0.50,0.50,0.85
+"Welcome back to the channel. Today we're going to break down something that most people completely overlook.",014b-conversational-test,other-aussie,0.50,0.50,0.85

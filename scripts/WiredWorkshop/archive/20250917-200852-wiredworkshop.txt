@@ -1,0 +1,68 @@
+eli-neutral: Welcome back to WiredWorkshop.
+eli-neutral: Today we’re breaking down laptop hardware.
+eli-neutral: Laptops are the go-to device for mobile computing.
+eli-neutral: They fit a lot of technology into a compact case, but that comes with trade-offs.
+eli-neutral: You get portability and performance, but limited space and tricky repairs.
+eli-neutral: Understanding laptop hardware is key for troubleshooting, upgrading, and passing your cert exams.
+eli-neutral: Let’s dive in.
+
+eli-neutral: Laptops rely on rechargeable batteries for mobility.
+eli-neutral: You’ll see two main types: lithium-ion and lithium-ion polymer.
+eli-neutral: Both avoid the old memory effect, so you can recharge anytime without hurting capacity.
+eli-neutral: Some laptops have modular removable batteries that pop out easily.
+eli-neutral: Others, especially modern ultrabooks, use internal batteries that require opening the case to replace.
+eli-neutral: Battery shapes and sizes vary, so replacements have to match your exact laptop model.
+
+eli-neutral: Keyboards are one of the most used and most replaced parts on laptops.
+eli-neutral: Many models let you swap the keyboard by removing a few screws or a bezel, then unplugging a ribbon cable.
+eli-neutral: If you’re troubleshooting, plug in a USB keyboard to check if the issue is the laptop keyboard or the operating system.
+eli-neutral: Laptop keyboards are compact and use function keys to double up features like brightness or Wi-Fi toggles.
+eli-neutral: Larger laptops may even squeeze in a numeric keypad.
+eli-neutral: Keycaps are fragile compared to desktop keyboards, so follow manufacturer instructions when replacing them.
+
+eli-neutral: Laptop memory uses SO-DIMMs, or small outline DIMMs, instead of the larger DIMMs in desktops.
+eli-neutral: Some laptops have easy upgrade slots under a bottom panel.
+eli-neutral: Others solder the RAM to the motherboard, making upgrades impossible without replacing the entire board.
+eli-neutral: When installing SO-DIMMs, slide the module into the slot at an angle and press it down until the clips lock it in place.
+
+eli-neutral: For storage, older laptops used two-and-a-half-inch spinning hard drives.
+eli-neutral: Modern laptops almost always use solid state drives.
+eli-neutral: SSDs are faster, more durable, and more reliable because they have no moving parts.
+eli-neutral: SSDs can come in the same two-and-a-half-inch size, or in a much smaller M.2 form factor that plugs directly into the motherboard with a single screw.
+eli-neutral: Upgrading to an SSD is one of the best performance boosts for older laptops.
+eli-neutral: You can reinstall the operating system from scratch, or use cloning software to copy everything from the old drive to the new one.
+
+eli-neutral: Wireless connectivity is essential in laptops.
+eli-neutral: Most modern laptops have Wi-Fi and Bluetooth built into the motherboard.
+eli-neutral: Older models may use removable mini PCIe or M.2 wireless cards.
+eli-neutral: These connect to small black and gray antenna wires that run up through the laptop display frame to improve reception.
+eli-neutral: Bluetooth is often integrated with Wi-Fi and provides a personal area network for short-range devices like mice, keyboards, and headsets.
+
+eli-neutral: Many laptops include biometric authentication.
+eli-neutral: Fingerprint readers and facial recognition are common and tie directly into Windows Hello.
+eli-neutral: Biometrics add convenience and security, letting you log in with just a finger or a glance.
+
+eli-neutral: Some laptops also have NFC, or near field communication.
+eli-neutral: NFC works at very short range, usually four centimeters or less.
+eli-neutral: It’s often used in enterprise environments for quick authentication, like tapping a badge to log into a hospital workstation or warehouse system.
+
+eli-neutral: Most laptops come with a built-in webcam above the screen and microphones on either side.
+eli-neutral: They’re convenient for video calls and recordings, but you can always connect an external webcam and mic if you need higher quality.
+
+eli-neutral: Repair difficulty varies widely between laptops.
+eli-neutral: Some are designed for easy service, letting you swap batteries, RAM, or storage quickly.
+eli-neutral: Others are sealed and very difficult to open.
+eli-neutral: Always check the service manual before attempting upgrades or repairs.
+eli-neutral: Thin and light laptops often sacrifice modularity to save space, while bulkier ones are usually easier to work on.
+
+eli-neutral: And that’s the full overview of laptop hardware.
+eli-neutral: From batteries and keyboards to RAM, storage, wireless, and security features, laptops pack a lot into a small frame.
+eli-neutral: If you’re studying for A plus, CCNA, or Security plus, these details will help you both on the exam and in real troubleshooting.
+
+eli-neutral: Thanks for watching WiredWorkshop.
+eli-neutral: If this helped you, hit like, subscribe for more IT breakdowns, and let’s keep learning the wires.
+
+
+
+
+

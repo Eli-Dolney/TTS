@@ -1,4 +1,0 @@
-text,filename,voice,prompt,exaggeration,cfg_weight,temperature
-hello Welcome to our Empire,tinytales-female,tinytales-female,voices/Female.wav,0.5,0.65,0.8
-hello Welcome to our Empire,tinytales-female2,tinytales-female2,voices/Female2.wav,0.5,0.65,0.8
-hello Welcome to our Empire,tinytales-oldman,tinytales-oldman,voices/Story Old Man.wav,0.55,0.6,0.8

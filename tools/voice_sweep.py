@@ -22,7 +22,7 @@ def generate_sweep_csv(
     exaggeration_range: list[float],
     cfg_weight_range: list[float],
     temperature_range: list[float],
-    voice: str = "wired-eliv3",
+    voice: str = "demo",
 ) -> None:
     """Generate a CSV with all parameter combinations."""
     rows = [("text", "filename", "voice", "exaggeration", "cfg_weight", "temperature")]
@@ -52,7 +52,7 @@ def main():
     parser.add_argument(
         "--output-csv",
         type=Path,
-        default=Path("scripts/WiredWorkshop/voice_test_sweep.csv"),
+        default=Path("scripts/Demo/voice_test_sweep.csv"),
         help="Output CSV file path",
     )
     parser.add_argument(
@@ -64,7 +64,7 @@ def main():
     parser.add_argument(
         "--voice",
         type=str,
-        default="wired-eliv3",
+        default="demo",
         help="Voice preset to use",
     )
     parser.add_argument(

@@ -1,4 +1,0 @@
-text,filename,voice,exaggeration,cfg_weight,temperature
-Hello and welcome back to Wired Workshop! My name is Gemini.,001-intro,wired-eliv3,0.58,0.45,0.75
-Today we're diving deep into the world of network engineering and technology.,002-main,wired-eliv3,0.58,0.45,0.75
-"""By the end of this lesson, you'll have a solid understanding of these concepts.""",003-outro,wired-eliv3,0.58,0.45,0.75

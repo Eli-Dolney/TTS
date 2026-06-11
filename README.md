@@ -3,6 +3,8 @@
 
 # Chatterbox TTS
 
+> **New here?** See **[GETTING_STARTED.md](GETTING_STARTED.md)** for step-by-step install and run instructions on **macOS** and **Windows** (Production UI, CLI, troubleshooting).
+
 [![Alt Text](https://img.shields.io/badge/listen-demo_samples-blue)](https://resemble-ai.github.io/chatterbox_demopage/)
 [![Alt Text](https://huggingface.co/datasets/huggingface/badges/resolve/main/open-in-hf-spaces-sm.svg)](https://huggingface.co/spaces/ResembleAI/Chatterbox)
 [![Alt Text](https://static-public.podonos.com/badges/insight-on-pdns-sm-dark.svg)](https://podonos.com/resembleai/chatterbox)
@@ -116,52 +118,29 @@ ta.save("outputs/testvc.wav", wav, model.sr)
 5. Add background music/SFX; render your video for upload.
 
 
-# Channel workflow (multi-channel setups)
+# Production workflow (this fork)
 
-Keep voice prompts organized by channel and use presets for reproducible settings.
+This repo adds a **Production UI**, multi-channel scripts, YouTube voice import, and automated rendering on top of upstream Chatterbox.
 
-1) Channel mapping
-
-- Presets: `voices/presets.json` (maps preset names to prompt WAVs and defaults)
-- Channels: `voices/channels.json` (maps channel names to preset keys)
-- Symlinked folders for convenience: `voices/channels/<ChannelName>/...`
-
-Example presets (snippet):
-
-```json
-{
-  "wired-eliv3": { "prompt": "voices/eliv3.wav", "exaggeration": 0.5, "cfg_weight": 0.65, "temperature": 0.8 },
-  "tinytales-female": { "prompt": "voices/Female.wav", "exaggeration": 0.5, "cfg_weight": 0.65, "temperature": 0.8 }
-}
-```
-
-Example channels:
-
-```json
-{
-  "WiredWorkshop": ["wired-eliv3"],
-  "TinyTalesTV": ["tinytales-female", "tinytales-female2", "tinytales-oldman"],
-  "Other": ["other-man1", "other-man2", "other-news"]
-}
-```
-
-2) Generate channel CSVs
-
-Use the helper to build a CSV for a given channel:
+**Start here:** [GETTING_STARTED.md](GETTING_STARTED.md) · [QUICK_REFERENCE.md](QUICK_REFERENCE.md)
 
 ```bash
-python tools/sweep.py channel-csv WiredWorkshop scripts/wiredworkshop.csv --text "hello Welcome to our Empire"
-python tools/sweep.py channel-csv TinyTalesTV scripts/tinytales.csv --text "hello Welcome to our Empire"
-python tools/sweep.py channel-csv Other scripts/other.csv --text "hello Welcome to our Empire"
+bash scripts/setup_mac.sh    # or setup_windows.ps1
+source .venv/bin/activate
+bash scripts/start_ui.sh     # http://127.0.0.1:7861
 ```
 
-3) Render audio for a channel
+1. Add a voice sample to `voices/` (upload or YouTube import in the UI)
+2. Configure `voices/presets.json` and `voices/channels.json` (starter `Demo` channel included)
+3. Write scripts under `scripts/YourChannel/`
+4. Render from the UI or CLI:
 
 ```bash
-python example_tts.py --script scripts/wiredworkshop.csv --output-dir outputs/WiredWorkshop --presets-file voices/presets.json --overwrite
+python tools/channel_manager.py render Demo --script scripts/Demo/demo.csv
+python tools/lesson.py --script scripts/Demo/demo.csv --channel Demo
 ```
 
-Tip: set `--voice` to a specific preset to use its defaults when `voice` is not specified in the CSV.
+Voice samples and rendered audio are **gitignored** — each user brings their own.
 # Acknowledgements
 - [Cosyvoice](https://github.com/FunAudioLLM/CosyVoice)
 - [Real-Time-Voice-Cloning](https://github.com/CorentinJ/Real-Time-Voice-Cloning)

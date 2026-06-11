@@ -1,7 +1,0 @@
-text,filename,voice,exaggeration,cfg_weight,temperature
-"Hello everyone, welcome to our channel. I'm your host for today.",001-man1-intro,other-man1,0.50,0.65,0.8
-"We're going to explore some fascinating topics together.",002-man1-content,other-man1,0.50,0.65,0.8
-"Hey there, thanks for tuning in. Let's dive right into today's discussion.",003-man2-intro,other-man2,0.50,0.65,0.8
-"I think you're going to find this really interesting and informative.",004-man2-content,other-man2,0.50,0.65,0.8
-"Good evening, and welcome to the news. Here are today's top stories.",005-news-intro,other-news,0.50,0.65,0.8
-"That's all for now. Stay informed and have a great day.",006-news-outro,other-news,0.50,0.65,0.8

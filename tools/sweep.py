@@ -12,7 +12,7 @@ import torchaudio as ta
 from chatterbox.tts import ChatterboxTTS
 
 
-def write_channel_csv(channel: str, out_csv: Path, text: str = "hello Welcome to our Empire") -> int:
+def write_channel_csv(channel: str, out_csv: Path, text: str = "Hello, welcome to the show.") -> int:
     presets_path = Path("voices/presets.json")
     channels_path = Path("voices/channels.json")
     if not presets_path.exists() or not channels_path.exists():
@@ -50,7 +50,7 @@ def main():
     p_csv = sub.add_parser("channel-csv", help="Write a CSV for a channel's presets")
     p_csv.add_argument("channel", type=str)
     p_csv.add_argument("out_csv", type=Path)
-    p_csv.add_argument("--text", type=str, default="hello Welcome to our Empire")
+    p_csv.add_argument("--text", type=str, default="Hello, welcome to the show.")
 
     args = p.parse_args()
 

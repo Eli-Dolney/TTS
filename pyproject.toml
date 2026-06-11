@@ -23,6 +23,16 @@ dependencies = [
     "safetensors==0.5.3"
 ]
 
+[project.optional-dependencies]
+production = [
+    "gradio",
+    "pyloudnorm",
+    "yt-dlp",
+    "static-ffmpeg",
+    "soundfile",
+    "setuptools<81",
+]
+
 [project.urls]
 Homepage = "https://github.com/resemble-ai/chatterbox"
 Repository = "https://github.com/resemble-ai/chatterbox"

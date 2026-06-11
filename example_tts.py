@@ -1,3 +1,4 @@
+import sys
 import torchaudio as ta
 import torch
 from pathlib import Path
@@ -10,6 +11,9 @@ from datetime import datetime
 from typing import Optional
 import librosa
 from chatterbox.tts import ChatterboxTTS
+
+sys.path.insert(0, str(Path(__file__).parent / "tools"))
+from script_render import ScriptLine, format_eta, render_script_lines
 
 # Automatically detect the best available device
 if torch.cuda.is_available():
@@ -147,6 +151,24 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--start-index", type=int, default=None, help="Optional starting index for filenames (e.g. 101)")
     parser.add_argument("--overwrite", action="store_true", help="Overwrite existing wav files instead of skipping")
     parser.add_argument("--seed", type=int, default=None, help="Set random seed for reproducibility")
+    parser.add_argument(
+        "--validate",
+        action="store_true",
+        default=True,
+        help="Run quality checks and auto-retry bad clips (default: True)",
+    )
+    parser.add_argument(
+        "--no-validate",
+        action="store_false",
+        dest="validate",
+        help="Disable quality checks and auto-retry",
+    )
+    parser.add_argument(
+        "--max-retries",
+        type=int,
+        default=2,
+        help="Max regeneration attempts per line when QC fails (default: 2)",
+    )
     return parser
 
 
@@ -191,95 +213,55 @@ def main():
 
     start_idx = args.start_index if args.start_index is not None else next_index(args.output_dir)
 
-    with log_path.open("a", encoding="utf-8") as log_file:
-        last_voice_key = None
-        for offset, spec in enumerate(specs, start=0):
-            idx = start_idx + offset
-            idx_str = f"{idx:03d}"
-            stem = spec.filename_stem or slugify(spec.text)
-            fname = f"{idx_str}-{stem}.wav"
-            out_path = args.output_dir / fname
-
-            if out_path.exists() and not args.overwrite:
-                print(f"Skip (exists): {out_path}")
-                continue
-
-            # Resolve voice and prompt
-            resolved_voice = spec.voice_name or default_voice
-            resolved_prompt: Optional[Path] = spec.prompt_path
-            if resolved_voice and resolved_voice in presets:
-                preset = presets[resolved_voice]
-                ppath = preset.get("prompt") or preset.get("audio_prompt")
-                if ppath:
-                    resolved_prompt = Path(ppath)
-                # Merge defaults if user did not override
-                if spec.exaggeration == args.exaggeration:
-                    try:
-                        spec.exaggeration = float(preset.get("exaggeration", spec.exaggeration))
-                    except Exception:
-                        pass
-                if spec.cfg_weight == args.cfg_weight:
-                    try:
-                        spec.cfg_weight = float(preset.get("cfg_weight", spec.cfg_weight))
-                    except Exception:
-                        pass
-                if spec.temperature == args.temperature:
-                    try:
-                        spec.temperature = float(preset.get("temperature", spec.temperature))
-                    except Exception:
-                        pass
-
-            # Prepare conditionals when voice/prompt changes
-            voice_key = (resolved_voice or "__none__", str(resolved_prompt) if resolved_prompt else "__builtin__")
-            if resolved_prompt is not None and voice_key != last_voice_key:
-                if resolved_prompt.exists():
-                    model.prepare_conditionals(str(resolved_prompt), exaggeration=spec.exaggeration)
-                    last_voice_key = voice_key
-                else:
-                    print(f"Warning: prompt not found for voice '{resolved_voice}': {resolved_prompt}")
-
-            wav = model.generate(
-                spec.text,
+    script_lines: list[ScriptLine] = []
+    for offset, spec in enumerate(specs, start=0):
+        idx = start_idx + offset
+        script_lines.append(
+            ScriptLine(
+                index=idx,
+                text=spec.text,
+                filename=spec.filename_stem or "",
+                voice=spec.voice_name or (default_voice or ""),
                 exaggeration=spec.exaggeration,
                 cfg_weight=spec.cfg_weight,
                 temperature=spec.temperature,
+                prompt=str(spec.prompt_path) if spec.prompt_path else "",
             )
+        )
 
-            # Post-processing: resample to 48k and/or LUFS normalize
-            target_sr = model.sr
-            wav_np = wav.squeeze(0).detach().cpu().numpy()
+    def on_progress(i, total, line, eta_seconds):
+        print(f"Rendering line {line.index}/{total} — ETA {format_eta(eta_seconds)}")
 
-            if args.to_48k and target_sr != 48000:
-                wav_np = librosa.resample(wav_np, orig_sr=target_sr, target_sr=48000)
-                target_sr = 48000
+    lufs = args.lufs_target if args.lufs_target is not None else 0.0
+    results = render_script_lines(
+        model,
+        script_lines,
+        args.output_dir,
+        presets,
+        voice_override=default_voice or "",
+        to_48k=args.to_48k,
+        lufs_target=lufs,
+        overwrite=args.overwrite,
+        progress_callback=on_progress,
+        validate=args.validate,
+        max_retries=args.max_retries,
+    )
 
-            if args.lufs_target is not None:
-                try:
-                    import pyloudnorm as pyln  # type: ignore
-                    meter = pyln.Meter(target_sr)
-                    loud = meter.integrated_loudness(wav_np)
-                    gain_db = args.lufs_target - loud
-                    factor = 10 ** (gain_db / 20.0)
-                    wav_np = wav_np * factor
-                except Exception:
-                    print("Note: pyloudnorm not available; skipping LUFS normalization.")
-
-            ta.save(str(out_path), torch.from_numpy(wav_np).unsqueeze(0), target_sr)
-            print(f"Saved: {out_path}")
-
+    with log_path.open("a", encoding="utf-8") as log_file:
+        for line, result in zip(script_lines, results):
+            print(f"{result['file']}: {result['status']}")
             meta = {
-                "index": idx,
-                "filename": fname,
-                "text": spec.text,
-                "exaggeration": spec.exaggeration,
-                "cfg_weight": spec.cfg_weight,
-                "temperature": spec.temperature,
-                "prompt_path": str(resolved_prompt) if resolved_prompt else None,
-                "voice": resolved_voice,
+                "index": line.index,
+                "filename": result["file"],
+                "text": line.text,
+                "exaggeration": line.exaggeration,
+                "cfg_weight": line.cfg_weight,
+                "temperature": line.temperature,
+                "voice": line.voice,
                 "device": selected_device,
                 "seed": args.seed,
+                "status": result["status"],
                 "created_at": datetime.utcnow().isoformat() + "Z",
-                "sample_rate": target_sr,
             }
             log_file.write(json.dumps(meta, ensure_ascii=False) + "\n")
 

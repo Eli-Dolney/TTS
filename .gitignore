@@ -1,113 +1,55 @@
-# Environments
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Virtual environments
 .venv/
 venv/
 .python-version
 
-# Python
-__pycache__/
-*.pyc
-.pytest_cache/
-
-# OS/editor
+# OS / IDE
 .DS_Store
+Thumbs.db
 .idea/
 .vscode/
+pyrightconfig.json
 
-# Generated audio/artifacts
+# User voice samples and generated audio (never commit)
+voices/*.wav
+voices/**/*.wav
+voices/*.mp3
+voices/**/*.mp3
 outputs/
 *.wav
-voices/**/*.wav
 *.mp3
 *.flac
 *.m4a
 *.aac
 *.ogg
-
-# Logs
-*.log
 *.jsonl
 
-# Env/config secrets
+# Secrets
 .env
 *.env
 env.*
 
-# Byte-compiled / cache
-__pycache__/
-*.py[cod]
-
-# Packaging
-*.egg-info/
-dist/
-build/
-
-# Virtual envs
-.venv/
-venv/
-
-# IDE / OS
-.vscode/
-.idea/
-.DS_Store
-Thumbs.db
-
-# Outputs and generated media
-outputs/
-*.wav
-*.mp3
-*.flac
-
-# Large model checkpoints
+# Model checkpoints (downloaded on first run)
 *.pt
 *.safetensors
 *.ckpt
-
-.vscode
-
-# Pylance
-pyrightconfig.json
-
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
-
-# C extensions
-*.so
-
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
-
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
-
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-syn_out/
 checkpoints/
-.gradio
+syn_out/
 
-# Ignore generated sample .wav files
-**/*.wav
-!eliv3.wav
+# Gradio cache
+.gradio/
+
+# Logs
+*.log

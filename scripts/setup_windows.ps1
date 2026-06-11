@@ -10,7 +10,7 @@ if (-not (Test-Path .venv)) { throw 'Failed to create venv with Python 3.12/3.11
 
 & .\.venv\Scripts\python -m pip install -U pip setuptools wheel
 & .\.venv\Scripts\python -m pip install -e .
-& .\.venv\Scripts\python -m pip install gradio pyloudnorm
+& .\.venv\Scripts\python -m pip install -e ".[production]"
 
 & .\.venv\Scripts\python - << 'PY'
 import torch, sys

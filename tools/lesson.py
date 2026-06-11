@@ -10,9 +10,8 @@ This tool automates the entire workflow:
 
 Usage:
     python tools/lesson.py \
-      --script scripts/WiredWorkshop/CCNA/NetworkTopologies01.csv \
-      --channel WiredWorkshop \
-      --subfolder CCNA/NetworkTopologies01
+      --script scripts/Demo/demo.csv \
+      --channel Demo
 """
 from __future__ import annotations
 
@@ -45,6 +44,8 @@ def render_lesson(
     lufs_target: float = -16.0,
     device: str = "auto",
     overwrite: bool = False,
+    validate: bool = True,
+    max_retries: int = 2,
     presets_file: Path = Path("voices/presets.json"),
     channels_file: Path = Path("voices/channels.json"),
 ) -> Path:
@@ -89,7 +90,10 @@ def render_lesson(
         cmd += ["--lufs-target", str(lufs_target)]
     if overwrite:
         cmd += ["--overwrite"]
-    
+    if not validate:
+        cmd += ["--no-validate"]
+    cmd += ["--max-retries", str(max_retries)]
+
     # Run render
     subprocess.run(cmd, check=True)
     
@@ -247,6 +251,24 @@ def main():
         help="Overwrite existing files",
     )
     parser.add_argument(
+        "--validate",
+        action="store_true",
+        default=True,
+        help="Run quality checks and auto-retry (default: True)",
+    )
+    parser.add_argument(
+        "--no-validate",
+        action="store_false",
+        dest="validate",
+        help="Disable quality checks and auto-retry",
+    )
+    parser.add_argument(
+        "--max-retries",
+        type=int,
+        default=2,
+        help="Max regeneration attempts per line when QC fails (default: 2)",
+    )
+    parser.add_argument(
         "--gap-seconds",
         type=float,
         default=0.5,
@@ -326,6 +348,8 @@ def main():
             lufs_target=args.lufs_target,
             device=args.device,
             overwrite=args.overwrite,
+            validate=args.validate,
+            max_retries=args.max_retries,
             presets_file=args.presets_file,
             channels_file=args.channels_file,
         )

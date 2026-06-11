@@ -1,0 +1,4 @@
+text,filename,voice,exaggeration,cfg_weight,temperature
+"Welcome to the local voice cloner. Replace this script with your own narration lines.",001-intro,demo,0.5,0.5,0.8
+"Add a voice sample to voices/your-voice.wav, then update presets.json or use the Production UI.",002-setup,demo,0.5,0.5,0.8
+"You can also import a voice directly from YouTube in the Voice Management tab.",003-youtube,demo,0.5,0.5,0.8

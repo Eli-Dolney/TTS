@@ -23,7 +23,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
     sub = p.add_subparsers(dest="cmd", required=True)
 
     r = sub.add_parser("render", help="Render audio for a channel using presets")
-    r.add_argument("channel", type=str, help="Channel name (e.g., WiredToWork)")
+    r.add_argument("channel", type=str, help="Channel name (e.g., Demo)")
     r.add_argument("--script", type=Path, required=True, help="Input script (txt/csv/tsv)")
     r.add_argument("--output-dir", type=Path, default=None, help="Output directory (default outputs/<Channel>)")
     r.add_argument("--channels-file", type=Path, default=Path("voices/channels.json"), help="Channels mapping JSON")

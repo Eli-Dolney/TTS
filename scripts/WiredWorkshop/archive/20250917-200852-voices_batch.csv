@@ -1,8 +1,0 @@
-text,filename,prompt,exaggeration,cfg_weight,temperature
-hello Welcome to our Empire,Female,voices/Female.wav,0.5,0.65,0.8
-hello Welcome to our Empire,Female2,voices/Female2.wav,0.5,0.65,0.8
-hello Welcome to our Empire,Man1,voices/Man1.wav,0.5,0.65,0.8
-hello Welcome to our Empire,News,voices/News.wav,0.5,0.65,0.8
-hello Welcome to our Empire,Story Old Man,voices/Story Old Man.wav,0.5,0.65,0.8
-hello Welcome to our Empire,eliv3,voices/eliv3.wav,0.5,0.65,0.8
-hello Welcome to our Empire,man2,voices/man2.wav,0.5,0.65,0.8

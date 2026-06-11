@@ -61,6 +61,8 @@ def render_channel(
     device: str = "auto",
     overwrite: bool = False,
     subfolder: Optional[str] = None,
+    validate: bool = True,
+    max_retries: int = 2,
 ) -> None:
     """Render audio for a channel."""
     channels = load_json(channels_file)
@@ -103,6 +105,9 @@ def render_channel(
         cmd += ["--lufs-target", str(lufs_target)]
     if overwrite:
         cmd += ["--overwrite"]
+    if not validate:
+        cmd += ["--no-validate"]
+    cmd += ["--max-retries", str(max_retries)]
 
     print(f"\n🎬 Rendering {channel}")
     print(f"   Script: {script}")
@@ -258,6 +263,24 @@ def main():
         action="store_true",
         help="Overwrite existing files",
     )
+    render_parser.add_argument(
+        "--validate",
+        action="store_true",
+        default=True,
+        help="Run quality checks and auto-retry (default: True)",
+    )
+    render_parser.add_argument(
+        "--no-validate",
+        action="store_false",
+        dest="validate",
+        help="Disable quality checks and auto-retry",
+    )
+    render_parser.add_argument(
+        "--max-retries",
+        type=int,
+        default=2,
+        help="Max regeneration attempts per line when QC fails (default: 2)",
+    )
 
     # Concat command
     concat_parser = subparsers.add_parser("concat", help="Concatenate audio for a channel")
@@ -320,6 +343,8 @@ def main():
             device=args.device,
             overwrite=args.overwrite,
             subfolder=args.subfolder,
+            validate=args.validate,
+            max_retries=args.max_retries,
         )
 
     elif args.command == "concat":

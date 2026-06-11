@@ -13,7 +13,7 @@ rm -rf .venv
 "${PYBIN}" -m venv .venv
 ./.venv/bin/python -m pip install -U pip setuptools wheel
 ./.venv/bin/python -m pip install -e .
-./.venv/bin/python -m pip install gradio pyloudnorm
+./.venv/bin/python -m pip install -e ".[production]"
 
 ./.venv/bin/python - <<'PY'
 import torch, sys

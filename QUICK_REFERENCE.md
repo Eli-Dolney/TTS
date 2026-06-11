@@ -1,90 +1,81 @@
-# Quick Reference Card
+# Quick Reference
 
-## 🎯 Most Common Commands
+## Install & run
 
-### Test Everything
 ```bash
-./.venv/bin/python tools/test_channels.py
+bash scripts/setup_mac.sh          # macOS
+source .venv/bin/activate
+bash scripts/start_ui.sh           # Production UI at http://127.0.0.1:7861
 ```
 
-### List Channels
+## First-time setup
+
+1. Add a voice WAV to `voices/` (or use **Import from YouTube** in the UI)
+2. Create a preset in **Voice Management** or edit `voices/presets.json`
+3. Add a channel in **Channel Management** or edit `voices/channels.json`
+4. Write a script CSV under `scripts/YourChannel/`
+
+See `voices/README.md` and `scripts/README.md` for details.
+
+## Common commands
+
 ```bash
+# List channels / voices
 ./.venv/bin/python tools/channel_manager.py list channels
+./.venv/bin/python tools/channel_manager.py list voices
+
+# Render demo script (after adding voices/your-voice.wav)
+./.venv/bin/python tools/channel_manager.py render Demo \
+  --script scripts/Demo/demo.csv
+
+# Full lesson pipeline (render + concat + metadata)
+./.venv/bin/python tools/lesson.py \
+  --script scripts/Demo/demo.csv \
+  --channel Demo
+
+# Concatenate clips
+./.venv/bin/python tools/channel_manager.py concat Demo
 ```
 
-### Render a Lesson
+## Clone from YouTube
+
+**UI:** Voice Management → Import from YouTube
+
+**CLI:**
 ```bash
-./.venv/bin/python tools/channel_manager.py render WiredWorkshop \
-  --script scripts/WiredWorkshop/CCNA/NetworkTopologies01.csv \
-  --subfolder CCNA/NetworkTopologies01
+./.venv/bin/python -c "
+from pathlib import Path
+from tools.youtube_voice import download_voice_sample
+path, msg = download_voice_sample(
+    'https://www.youtube.com/watch?v=VIDEO_ID',
+    Path('voices'), 'my-voice', start='1:30', duration=15
+)
+print(path, msg)
+"
 ```
 
-### Concatenate Audio
+## Render quality controls
+
+QC and auto-retry are on by default:
+
 ```bash
-./.venv/bin/python tools/channel_manager.py concat WiredWorkshop \
-  --subfolder CCNA/NetworkTopologies01
+./.venv/bin/python tools/channel_manager.py render Demo \
+  --script scripts/Demo/demo.csv --no-validate
+
+./.venv/bin/python tools/channel_manager.py render Demo \
+  --script scripts/Demo/demo.csv --max-retries 3
 ```
 
----
+## Script CSV format
 
-## 📺 Your Channels
-
-| Channel | Default Voice | Scripts Folder |
-|---------|--------------|----------------|
-| WiredWorkshop | wired-eliv3 | `scripts/WiredWorkshop/` |
-| TinyTalesTV | tinytales-female | `scripts/TinyTalesTV/` |
-| WiredToWork | wired-businessgirl | `scripts/WiredToWork/` |
-| LearningTheWires | wired-eliv3 | `scripts/LearningTheWires/` |
-| ViceCityVault | other-man1 | `scripts/ViceCityVault/` |
-| NeuralWires | wired-eliv3 | `scripts/NeuralWires/` |
-| EliDolney | wired-eliv3 | `scripts/EliDolney/` |
-| LotsOfErrors | other-man2 | `scripts/LotsOfErrors/` |
-| FomoFactory | tinytales-female | `scripts/FomoFactory/` |
-
----
-
-## 🎤 Voice Presets
-
-All voices are configured in `voices/presets.json`. Each preset has:
-- `prompt`: Path to voice sample WAV file
-- `exaggeration`: Emotion/intensity (0.0-1.0)
-- `cfg_weight`: Pacing/stability (0.0-1.0)
-- `temperature`: Sampling randomness (0.0-1.0)
-
----
-
-## 📝 Script Format
-
-**CSV (Recommended)**:
 ```csv
 text,filename,voice,exaggeration,cfg_weight,temperature
-Hello world.,001-intro,wired-eliv3,0.58,0.45,0.75
+Hello world.,001-intro,demo,0.5,0.5,0.8
 ```
 
-**Plain Text**:
-```txt
-Hello world.
-This is line two.
-```
+## Docs
 
----
-
-## 🔧 Troubleshooting
-
-**Problem**: Voice not generating
-**Solution**: Run `tools/test_channels.py` to check setup
-
-**Problem**: Wrong voice used
-**Solution**: Check `voices/channels.json` mapping
-
-**Problem**: Audio quality issues
-**Solution**: Use `--to-48k --lufs-target -16` flags
-
----
-
-## 📚 Full Documentation
-
-- `CHANNEL_SETUP_GUIDE.md` - Complete setup guide
-- `YOUTUBE_EMPIRE_ROADMAP.md` - Future enhancements
-- `README.md` - General TTS documentation
-
+- `GETTING_STARTED.md` — install on Mac & Windows
+- `CHANNEL_SETUP_GUIDE.md` — multi-channel workflow
+- `LESSON_PIPELINE_GUIDE.md` — automated render + concat
+- `UPGRADE_SUMMARY.md` — feature overview

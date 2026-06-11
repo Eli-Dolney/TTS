@@ -1,0 +1,14 @@
+{
+  "my-narrator": {
+    "prompt": "voices/my-narrator.wav",
+    "exaggeration": 0.5,
+    "cfg_weight": 0.5,
+    "temperature": 0.8
+  },
+  "my-dramatic": {
+    "prompt": "voices/my-narrator.wav",
+    "exaggeration": 0.75,
+    "cfg_weight": 0.4,
+    "temperature": 0.7
+  }
+}

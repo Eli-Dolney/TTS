@@ -1,0 +1,9 @@
+{
+  "MyChannel": [
+    "my-narrator"
+  ],
+  "MySecondChannel": [
+    "my-narrator",
+    "my-dramatic"
+  ]
+}
